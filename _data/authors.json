@@ -1,8 +1,8 @@
 {
   "Sadra": {
     "name" : "Sadra Isapanah Amlashi",
-    "avatar" : "{{ site.url }}/assets/img/base/avatar.jpg",
+    "avatar" : "https://sadra.github.io/english/assets/img/base/avatar.jpg",
     "bio" : "I'm a Android & iOS developer.",
-    "info-url" : "{{ site.url }}/about"
+    "info-url" : "https://sadra.github.io/english/about/"
   }
 }
