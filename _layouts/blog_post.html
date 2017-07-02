@@ -26,10 +26,10 @@ layout: theme
 
         <div class="post-routes-list">
             {% for category in page.categories %}
-            <a class="category-link" href="/category/{{ category | slugify }}">{{ category }}</a>
+            <a class="category-link" href="{{ site.url }}/category/{{ category | slugify }}">{{ category }}</a>
             {% endfor %}
             {% for tag in page.tags %}
-            <a class="tag-link" href="/tag/{{ tag | slugify }}">{{ tag }}</a>
+            <a class="tag-link" href="{{ site.url }}/tag/{{ tag | slugify }}">{{ tag }}</a>
             {% endfor %}
         </div>
 

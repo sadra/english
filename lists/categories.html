@@ -7,7 +7,7 @@ layout: theme
 
     <div class="list-items-container">
         {% for category in site.categories %}
-        <a class="list-item-category" href="/category/{{ category[0] | slugify }}">{{ category[0] }}</a>
+        <a class="list-item-category" href="{{ site.url }}/category/{{ category[0] | slugify }}">{{ category[0] }}</a>
         {% endfor %}
     </div>
 

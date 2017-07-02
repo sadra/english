@@ -21,13 +21,13 @@ layout: theme
                 </div>
 
                 <div class="post-feature-box">
-                    <a class="post-item-title-link" href="{{ post.url }}"><p class="post-item-title">{{ post.title }}</p></a>
+                    <a class="post-item-title-link" href="{{ site.url }}{{ post.url }}"><p class="post-item-title">{{ post.title }}</p></a>
                     <div class="post-list-routes">
                         {% for category in post.categories %}
-                        <a class="category-link" href="/category/{{ category | slugify }}">{{ category }}</a>
+                        <a class="category-link" href="{{ site.url }}/category/{{ category | slugify }}">{{ category }}</a>
                         {% endfor %}
                         {% for tag in post.tags %}
-                        <a class="tag-link" href="/tag/{{ tag | slugify }}">{{ tag }}</a>
+                        <a class="tag-link" href="{{ site.url }}/tag/{{ tag | slugify }}">{{ tag }}</a>
                         {% endfor %}
                     </div>
                 </div>

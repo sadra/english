@@ -7,7 +7,7 @@ layout: theme
 
     <div class="list-items-container">
         {% for tag in site.tags %}
-            <a class="list-item-tag" href="/tag/{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+            <a class="list-item-tag" href="{{ site.url }}/tag/{{ tag[0] | slugify }}">{{ tag[0] }}</a>
         {% endfor %}
     </div>
 
