@@ -1,0 +1,121 @@
+<html lang="Farsi">
+<head>
+    <meta charset="utf-8">
+<meta content="IE-edge,chrome=1" http-equiv="X-UA-Compatable">
+<meta name="description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+<title>404 Not Found</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="404 Not Found">
+<meta property="og:url" content="https://sadra.github.io/english//404.html">
+
+    <meta property="og:image" content="https://sadra.github.io/english//assets/img/avatar.jpg" />
+
+<meta property="og:site_name" content="Sadra Isapanah Amlashi">
+<meta property="og:description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="404 Not Found">
+<meta name="twitter:description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+
+<link rel="alternative" href="/site-map.xml" title="Sadra Isapanah Amlashi" type="application/atom+xml">
+<link rel="short icon" type="image/x-icon" href="/assets/img/base/favicon.png">
+<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+
+
+    <style>
+        #playBtn {
+            overflow: visible;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            color: #0a0a0a;
+            background: #ffb101;
+            margin: 5px;
+            width: 40px;
+            height: 44px;
+        }
+
+
+        #playBtn:hover {
+            background-color: #ff9616;
+        }
+
+        #playBtn:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 12.5px;
+            left: 14px;
+            margin: 0 auto;
+            border-style: solid;
+            border-width: 9.5px 0 9.5px 17px;
+            border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="err404-container">
+        <div class="err404-container-content">
+
+            <div class="err404-description-container">
+
+                <h1>404</h1>
+                <h2>Your page ain't here, kid.</h2>
+                <p>Of all the URLs on all the websites in all the world, you walk into mine...</p>
+
+            </div>
+
+            <div class="err404-movie-container">
+                <p>If you want the page, just search it again. You know how to search, don't you, baby? Click on back, and return to my heart. <a href="/">Back</a></p>
+            </div>
+
+            <div  id="playBtn"></div>
+
+        </div>
+    </div>
+
+    <audio id="soundHandle" autoplay hidden loop>
+        <source src="/assets/raw/lauren-bacall-singing.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+
+        var isPlayed = false;
+
+        document.getElementById("playBtn").addEventListener("click", playMusic);
+        const sound = document.getElementById("soundHandle");
+
+        function playMusic() {
+            if(isPlayed){
+                isPlayed = false;
+                sound.pause();
+                sound.currentTime = 0;
+            }else{
+                isPlayed = true;
+                sound.pause();
+                sound.currentTime = 0;
+                sound.play();
+            }
+        }
+
+    </script>
+
+<script  type="application/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
+<script  type="application/javascript" src="/assets/js/function.js"></script>
+<script  type="application/javascript" src="/assets/js/html2canvas.min.js"></script>
+<script  type="application/javascript" src="/assets/js/canvas2image.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5952bba56b75766c"></script>
+</body>
+</html>
+
+
