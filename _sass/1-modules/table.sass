@@ -1,0 +1,105 @@
+table
+  direction: ltr
+  padding: 0
+  border-collapse: collapse
+  font-family: VAZIR, Helvetica, sans-serif
+  text-shadow: 1px 1px 0px #fff
+  margin: 20px auto
+  border: #cccccc 1px solid
+  border-radius: 5px
+
+  th, tr, td
+    text-align: inherit
+
+  td
+    border-left: 1px solid #cccccc
+  td:last-child
+    border-left: 0 solid #cccccc
+
+  th
+    border-left: 1px solid #cccccc
+  th:last-child
+    border-left: 0 solid #cccccc
+
+  tr
+    padding: 0
+    background-color: white
+    margin: 0
+
+  tr:nth-child(2n)
+    background-color: #f8f8f8
+
+  tr th
+    font-weight: bold
+    text-align: left
+    margin: 0
+    padding: 8px 16px
+
+  tr td
+    text-align: left
+    margin: 0
+    padding: 8px 16px
+
+  tr th :first-child, table tr td :first-child
+    margin-top: 0
+
+  tr th :last-child, table tr td :last-child
+    margin-bottom: 0
+
+tbody
+  tr
+    border-top: 1px solid #cccccc
+
+
+.table-container
+  overflow-x: scroll
+  padding: 0 5px
+  margin: 20px 0
+
+.dir-rtl
+  direction: rtl
+  table
+    direction: rtl
+  td
+    border-left: 1px solid #cccccc
+    border-right: 0 solid #cccccc
+  td:last-child
+    border-left: 0 solid #cccccc
+
+  th
+    border-left: 1px solid #cccccc
+    border-right: 0 solid #cccccc
+  th:last-child
+    border-left: 0 solid #cccccc
+  th, tr, td
+    text-align: inherit
+
+.dir-ltr
+  direction: ltr
+  table
+    direction: ltr
+  td
+    border-right: 1px solid #cccccc
+    border-left: 0 solid #cccccc
+  td:last-child
+    border-right: 0 solid #cccccc
+
+  th
+    border-right: 1px solid #cccccc
+    border-left: 0 solid #cccccc
+  th:last-child
+    border-right: 0 solid #cccccc
+  th, tr, td
+    text-align: inherit
+
+.pos-left
+  table
+    margin: 0 auto 0 0
+
+.pos-center
+  table
+    margin: 0 auto
+
+.pos-right
+  table
+    margin: 0 0 0 auto

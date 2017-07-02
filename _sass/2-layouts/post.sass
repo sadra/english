@@ -1,0 +1,207 @@
+.blog-post-container
+  width: 100%
+  transition: all 0.3s ease-in
+  position: relative
+  z-index: 5
+  top: 0
+  left: 0
+  right: 0
+  padding-top: 5px
+  padding-left: 5px
+  padding-right: 5px
+  margin: auto
+  p
+    font-size: 1em
+    color: black
+    font-weight: 100
+    line-height: 1.5em
+  ol
+    li
+      p
+        line-height: 1.9em !important
+        padding: 0
+  ul
+    li
+      line-height: 1.9em !important
+
+  .post-title-container
+    width: 100%
+    margin: 20px auto
+    @media screen and (max-width: 600px)
+      margin: 15px auto
+    @media screen and (max-width: 400px)
+      margin: 10px auto
+  .author-card
+    background: #f6f6f6
+    padding: 15px
+    border-radius: 5px
+    border: 1px solid #f6f6f6
+    width: 100%
+    margin: 0 auto
+    .author-message
+      padding-top: 8px
+      display: flex
+      align-items: flex-start
+      p
+        flex: 1
+        font-size: .9em
+      img
+        margin-left: 0px
+        margin-right: 10px
+        width: 50px
+        height: 50px
+    .addthis_inline_share_toolbox
+      direction: ltr
+      margin: 5px auto
+      text-align: left
+  .post_created
+    margin-bottom: 20px
+    p
+      color: $post_date
+
+  .post-routes-list
+    margin: 25px 0 15px 5px
+    .tag-link
+      unicode-bidi: embed
+      white-space: nowrap
+      display: inline-block
+      height: 20px
+      font-size: .6em
+      margin-bottom: 2px
+      margin-left: 3px
+      background-color: #9C27B0
+      color: #ffffff
+      padding: 5px
+      border: solid 1px #9C27B0
+      border-radius: 3px
+      @media screen and (max-width: 500px)
+        font-size: 0.55em
+        margin-left: 1px
+    .tag-link:hover
+      background-color: #E91E63
+      border-color: #E91E63
+    .tag-link:before
+      content: "#"
+    .category-link
+      unicode-bidi: embed
+      white-space: nowrap
+      display: inline-block
+      height: 22px
+      font-size: .7em
+      margin-bottom: 2px
+      color: #9E9E9E
+      padding-top: 5px
+      padding-bottom: 5px
+      padding-left: 3px
+      font-weight: bold
+      @media screen and (max-width: 500px)
+        font-size: 0.6em
+    .category-link:hover
+      color: #9C27B0
+    .category-link:after
+      content: " / "
+
+  @media screen and (max-width: 500px)
+    width: 92%
+    h1
+      font-size: 1.5em
+      line-height: 1.3em
+  p
+    img
+      max-width: 70%
+      display: inherit
+      height: initial
+      margin: 10px auto
+      @media screen and (max-width: 700px)
+        max-width: 90%
+
+  .post-cover
+    overflow: hidden
+    height: 300px /* Height of the "content" div */
+    width: 100%
+    @media screen and (max-width: 900px)
+      height: 250px
+    @media screen and (max-width: 600px)
+      height: 200px
+    @media screen and (max-width: 400px)
+      height: 150px
+    img
+      width: 100%
+  .Prev-next-post-container
+    display: flow-root
+    direction: ltr
+    margin-top: 20px
+    clear: both
+    a
+      text-decoration: none
+      display: inline-block
+      padding: 8px 16px
+    .previous-btn
+      background-color: #f1f1f1
+      color: black
+      float: left
+      text-align: left
+      width: auto
+      border-bottom: 3px solid #cccccc
+      @media screen and (max-width: 400px)
+        width: 100%
+        margin: 5px 5px 5px 0px
+    .previous-btn:hover
+      background-color: #cccccc
+    .next-btn
+      background-color: #FFC107
+      color: white
+      float: right
+      text-align: right
+      width: auto
+      border-bottom: 3px solid #ffab05
+      @media screen and (max-width: 400px)
+        width: 100%
+        margin: 5px 0px 5px 5px
+    .next-btn:hover
+      background-color: #FFB300
+
+  .related-posts-container
+    display: flex
+    margin: 5px 20px 0 20px
+    width: 100%
+    background-color: #ffffff
+    @media screen and (max-width: 800px)
+      display: initial
+    .related-post-box
+      margin: 10px
+      width: 30%
+      border-radius: 3px
+      box-shadow: 0 1px 7px rgba(0,0,0,.2)
+      @media screen and (max-width: 800px)
+        width: auto
+    .related-post-box-info
+      height: 85px
+      padding: 0 8px 8px 8px
+      display: table
+      a
+        display: table-cell
+        vertical-align: middle
+        color: #050505
+        font-size: 1em
+        height: 100%
+        overflow: hidden
+        line-height: 1.4em
+        text-align: right
+      a:hover
+        color: $link-highlight-hover
+    .related-post-box-cover
+      width: 100%
+      height: 90px
+      overflow: hidden
+      background-position: 50% 50% !important
+      background-size: 100% auto
+      a
+        width: 100%
+        height: 100%
+  .related-posts-title
+    margin-top: 25px
+
+
+
+

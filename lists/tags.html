@@ -1,0 +1,14 @@
+---
+layout: theme
+---
+<div class="content">
+
+    <h1 class="list-title">List of <span>#Tags</span></h1>
+
+    <div class="list-items-container">
+        {% for tag in site.tags %}
+            <a class="list-item-tag" href="/tag/{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+        {% endfor %}
+    </div>
+
+</div>

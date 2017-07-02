@@ -1,0 +1,97 @@
+---
+permalink: /404.html
+title: 404 Not Found
+---
+<html lang="Farsi">
+<head>
+    {% include theme/head.html %}
+
+    <style>
+        #playBtn {
+            overflow: visible;
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            color: #0a0a0a;
+            background: #ffb101;
+            margin: 5px;
+            width: 40px;
+            height: 44px;
+        }
+
+
+        #playBtn:hover {
+            background-color: #ff9616;
+        }
+
+        #playBtn:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 12.5px;
+            left: 14px;
+            margin: 0 auto;
+            border-style: solid;
+            border-width: 9.5px 0 9.5px 17px;
+            border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="err404-container">
+        <div class="err404-container-content">
+
+            <div class="err404-description-container">
+
+                <h1>404</h1>
+                <h2>Your page ain't here, kid.</h2>
+                <p>Of all the URLs on all the websites in all the world, you walk into mine...</p>
+
+            </div>
+
+            <div class="err404-movie-container">
+                <p>If you want the page, just search it again. You know how to search, don't you, baby? Click on back, and return to my heart. <a href="/">Back</a></p>
+            </div>
+
+            <div  id="playBtn"></div>
+
+        </div>
+    </div>
+
+    <audio id="soundHandle" autoplay hidden loop>
+        <source src="/assets/raw/lauren-bacall-singing.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+
+        var isPlayed = false;
+
+        document.getElementById("playBtn").addEventListener("click", playMusic);
+        const sound = document.getElementById("soundHandle");
+
+        function playMusic() {
+            if(isPlayed){
+                isPlayed = false;
+                sound.pause();
+                sound.currentTime = 0;
+            }else{
+                isPlayed = true;
+                sound.pause();
+                sound.currentTime = 0;
+                sound.play();
+            }
+        }
+
+    </script>
+
+{% include theme/js-link.html %}
+
+</body>
+</html>
+
+
