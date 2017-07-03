@@ -13,7 +13,7 @@ categories:
     - Apple
     - iOS
 
-cover: /assets/img/post/test-post/cover.jpg
+cover: /assets/img/post/2016-6-29/naivagtionbar_0.jpg
 
 author: Sadra
 ---
