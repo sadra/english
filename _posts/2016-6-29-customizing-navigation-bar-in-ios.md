@@ -25,12 +25,12 @@ author: Sadra
 
 Sometimes you need to customize your Navigation Bar. With this tutorial you can find out how to change Navigation Bar background color, change the Navigation Bar’s title’s font or size (programmatically), how to customize the left and right button of Navigation Bar and etc.
 
-![Customizing Navgiation Bar](/assets/img/post/2016-6-29/naivagtionbar_1.jpg)
+![Customizing Navgiation Bar](./assets/img/post/2016-6-29/naivagtionbar_1.jpg)
 
 
 First of All create your project and then embed in **Navigation Controller** into you ViewController
 
-![Customizing Navgiation Bar](/assets/img/post/2016-6-29/naivagtionbar_2.jpg)
+![Customizing Navgiation Bar](./assets/img/post/2016-6-29/naivagtionbar_2.jpg)
 
 Now we have a pure Navigation Controller and our baby ViewController.
 
