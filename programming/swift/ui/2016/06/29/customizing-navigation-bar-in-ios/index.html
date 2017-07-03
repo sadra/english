@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html lang="Farsi">
+
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta content="IE-edge,chrome=1" http-equiv="X-UA-Compatable">
+<meta name="description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+<title>Customizing navigation bar in ios</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Customizing navigation bar in ios">
+<meta property="og:url" content="https://sadra.github.io/english/programming/swift/ui/2016/06/29/customizing-navigation-bar-in-ios/">
+
+<meta property="og:image" content="/assets/img/post/test-post/cover.jpg" />
+
+<meta property="og:site_name" content="Sadra Isapanah Amlashi">
+<meta property="og:description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Customizing navigation bar in ios">
+<meta name="twitter:description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+
+<link rel="alternative" href="/site-map.xml" title="Sadra Isapanah Amlashi" type="application/atom+xml">
+<link rel="short icon" type="image/x-icon" href="https://sadra.github.io/english/assets/img/base/favicon.png">
+<link rel="stylesheet" type="text/css" href="https://sadra.github.io/english/assets/css/styles.css">
+
+    </head>
+
+    <body>
+        <!-- Header -->
+<header class="header-container">
+    <nav class="nav-wrap">
+        <a href="https://sadra.github.io/english" class="nav-logo">Sadra Isapanah Amlashi</a>
+        <ul class="navigation">
+
+            <li><a href="https://sadra.github.io/english/lists/categories">Categories</a></li>
+            <li><a href="https://sadra.github.io/english/lists/tags">Tags</a></li>
+            <li><a href="https://sadra.github.io/english/about/">About</a></li>
+            <li><a href="https://sadra.github.io/">فارسی</a></li>
+
+        </ul>
+    </nav>
+</header>
+<!-- /Header -->
+
+        <div class="content">
+
+    <div class="blog-post-container">
+
+        
+            <div class="post-cover">
+                <img src="https://sadra.github.io/english/assets/img/post/test-post/cover.jpg" alt="Customizing navigation bar in ios">
+            </div>
+        
+
+        <div class="post-title-container">
+            <h1 class="post-title">Customizing navigation bar in ios</h1>
+        </div>
+
+        <div class="post_created">
+            <p>Posted by <a href="https://sadra.github.io/english/about">Sadra Isapanah Amlashi</a> at 06/29/2016</p> <br/>
+        </div>
+
+        <div class="post-content">
+            <p><strong>Issue</strong></p>
+
+<p>Sometimes you need to customize your Navigation Bar. With this tutorial you can find out how to change Navigation Bar background color, change the Navigation Bar’s title’s font or size (programmatically), how to customize the left and right button of Navigation Bar and etc.</p>
+
+<p><img src="/assets/img/post/test-post/naivagtionbar_1.jpg" alt="Customizing Navgiation Bar" /></p>
+
+<p>First of All create your project and then embed in <strong>Navigation Controller</strong> into you ViewController</p>
+
+<p><img src="/assets/img/post/test-post/naivagtionbar_2.jpg" alt="Customizing Navgiation Bar" /></p>
+
+<p>Now we have a pure Navigation Controller and our baby ViewController.</p>
+
+<p><img src="/assets/img/post/test-post/naivagtionbar_.3jpg" alt="Customizing Navgiation Bar" /></p>
+
+<p><strong>Change Navigation Bar’s background color:</strong></p>
+
+<p>At first choose the Navigation Controller, then select the <strong>Navigation Bar</strong> , on Attributes Inspector , from Bar Tint choose your favorite color. done! you have you new Navigation Bar background color.</p>
+
+<p><img src="/assets/img/post/test-post/naivagtionbar_4.gif" alt="Customizing Navgiation Bar" /></p>
+
+<p><strong>Set Title for Navigation Bar</strong></p>
+
+<p>Choose you ViewController and select__Navigation Item__, then in Attributes Inspector set you title :</p>
+
+<p><img src="/assets/img/post/test-post/naivagtionbar_5.gif" alt="Customizing Navgiation Bar" /></p>
+
+<p>Then we want change the title attributes (color, size, font), after choosing Navigation Controller then Navigation Bar, we able to change title attributes from__Attributes Inspector__as you can see in below:</p>
+
+<p><img src="/assets/img/post/test-post/naivagtionbar_6.jpg" alt="Customizing Navgiation Bar" /></p>
+
+<p>Exception: If you use__custom font__in your project, you cannot choose you font from here!</p>
+
+<p><img src="/assets/img/post/test-post/naivagtionbar_7.jpg" alt="Customizing Navgiation Bar" /></p>
+
+<p>Solution: so, you should change title attributes with Swift in your ViewController Class. For this issue, you should set <strong>NSFontAttributeName</strong> for <strong>titleTextAttributes</strong> that contains Font-Family, Font Size and Font Color in ViewDidLoad of your viewController.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code>
+<span class="c1">//Set Attributes for Navigation Title</span>
+
+<span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+    <span class="k">self</span><span class="o">.</span><span class="n">navigationController</span><span class="p">?</span><span class="o">.</span><span class="n">navigationBar</span><span class="o">.</span><span class="n">titleTextAttributes</span> <span class="o">=</span> <span class="p">[</span> <span class="kt">NSFontAttributeName</span><span class="p">:</span> <span class="kt">UIFont</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"IRANSans"</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="mf">16.0</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="kt">NSForegroundColorAttributeName</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">whiteColor</span><span class="p">()]</span>
+
+<span class="p">}</span>
+
+</code></pre>
+</div>
+
+<p><img src="/assets/img/post/test-post/naivagtionbar_8.jpg" alt="Customizing Navgiation Bar" /></p>
+
+<p><strong>Add Button to Navigation Bar</strong></p>
+
+<p>You can add 2 button into you Navigation Bar, one button for left and one button for right. in StoryBoard you can add button as you see below:</p>
+
+<p><img src="/assets/img/post/test-post/naivagtionbar_9.gif" alt="Customizing Navgiation Bar" /></p>
+
+<p>and the result is:</p>
+
+<p><img src="/assets/img/post/test-post/naivagtionbar10_.jpg" alt="Customizing Navgiation Bar" /></p>
+
+<p>But programmatically you should create a button and define it for left or right of you Navigation Bar:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code>
+<span class="c1">//Delcare Left and right Button in viewDidLoad Method</span>
+
+<span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+    <span class="c1">//Set White color for all items in Navigation Bar</span>
+
+    <span class="k">self</span><span class="o">.</span><span class="n">navigationController</span><span class="p">?</span><span class="o">.</span><span class="n">navigationBar</span><span class="o">.</span><span class="n">tintColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="p">(</span><span class="mi">255</span><span class="o">/</span><span class="mf">255.0</span><span class="p">),</span> <span class="nv">green</span><span class="p">:</span> <span class="p">(</span><span class="mi">255</span><span class="o">/</span><span class="mf">255.0</span><span class="p">),</span> <span class="nv">blue</span><span class="p">:</span> <span class="p">(</span><span class="mi">255</span><span class="o">/</span><span class="mf">255.0</span><span class="p">),</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span>
+
+    <span class="c1">//Button with Title</span>
+
+    <span class="k">let</span> <span class="nv">leftButton</span> <span class="o">=</span> <span class="kt">UIBarButtonItem</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Back Btn"</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIBarButtonItemStyle</span><span class="o">.</span><span class="kt">Plain</span><span class="p">,</span> <span class="nv">target</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">action</span><span class="p">:</span> <span class="kd">#selector(</span><span class="nf">ViewController.leftButtonClicked</span><span class="kd">)</span><span class="p">)</span>
+
+    <span class="n">leftButton</span><span class="o">.</span><span class="nf">setTitleTextAttributes</span><span class="p">([</span><span class="kt">NSFontAttributeName</span><span class="p">:</span> <span class="kt">UIFont</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"IRANSans"</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="mi">15</span><span class="p">)</span><span class="o">!</span><span class="p">,</span> <span class="kt">NSForegroundColorAttributeName</span><span class="p">:</span> <span class="kt">UIColor</span><span class="o">.</span><span class="nf">whiteColor</span><span class="p">()],</span> <span class="nv">forState</span><span class="p">:</span> <span class="kt">UIControlState</span><span class="o">.</span><span class="kt">Normal</span><span class="p">)</span> <span class="c1">//You can declare specefiec color for each item you want too</span>
+
+    <span class="k">self</span><span class="o">.</span><span class="n">navigationItem</span><span class="o">.</span><span class="n">leftBarButtonItem</span> <span class="o">=</span> <span class="n">leftButton</span>
+
+    <span class="c1">//Button with Image</span>
+
+    <span class="k">let</span> <span class="nv">rightButton</span> <span class="o">=</span> <span class="kt">UIButton</span><span class="p">()</span>
+
+    <span class="n">rightButton</span><span class="o">.</span><span class="nf">setImage</span><span class="p">(</span><span class="kt">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"cancel"</span><span class="p">),</span> <span class="nv">forState</span><span class="p">:</span> <span class="o">.</span><span class="kt">Normal</span><span class="p">)</span>
+
+    <span class="n">rightButton</span><span class="o">.</span><span class="n">frame</span> <span class="o">=</span> <span class="kt">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+
+    <span class="n">rightButton</span><span class="o">.</span><span class="nf">addTarget</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="nv">action</span><span class="p">:</span> <span class="kd">#selector(</span><span class="nf">ViewController.rightButtonClicked</span><span class="kd">)</span><span class="p">,</span> <span class="nv">forControlEvents</span><span class="p">:</span> <span class="o">.</span><span class="kt">TouchUpInside</span><span class="p">)</span>
+
+    <span class="k">self</span><span class="o">.</span><span class="n">navigationItem</span><span class="o">.</span><span class="nf">setRightBarButtonItem</span><span class="p">(</span><span class="kt">UIBarButtonItem</span><span class="p">(</span><span class="nv">customView</span><span class="p">:</span> <span class="n">rightButton</span><span class="p">),</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">);</span>
+
+<span class="p">}</span>
+
+<span class="c1">//Action when leftButton Clicked</span>
+
+<span class="kd">func</span> <span class="nf">leftButtonClicked</span><span class="p">(){</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Left Button Clicked"</span><span class="p">)</span> <span class="c1">//Print result is: Left Button Clicked</span>
+
+<span class="p">}</span>
+
+<span class="c1">//Action when rightButton Clicked</span>
+
+<span class="kd">func</span> <span class="nf">rightButtonClicked</span><span class="p">(</span><span class="nv">sende</span><span class="p">:</span> <span class="kt">UIButton</span><span class="p">){</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Right Button Clicked"</span><span class="p">)</span> <span class="c1">//Print result is: Right Button Clicked</span>
+
+<span class="p">}</span>
+
+</code></pre>
+</div>
+
+<p>And the result is:</p>
+
+<p><img src="/assets/img/post/test-post/naivagtionbar_11.jpg" alt="Customizing Navgiation Bar" /></p>
+
+<p><strong>Customize Navigation Bar’s BackButton</strong></p>
+
+<p>Sometimes you need to customize Navigation Bar’s Back Button, like the color of button, or font and size. you should do it programmatically in viewDidLoad Method of First ViewController as you can see following:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code>
+<span class="c1">//you should declare backBarButtonItem in viewDidLoad Method</span>
+
+<span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+    <span class="k">self</span><span class="o">.</span><span class="n">navigationController</span><span class="p">?</span><span class="o">.</span><span class="n">navigationBar</span><span class="o">.</span><span class="n">tintColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="p">(</span><span class="mi">255</span><span class="o">/</span><span class="mf">255.0</span><span class="p">),</span> <span class="nv">green</span><span class="p">:</span> <span class="p">(</span><span class="mi">255</span><span class="o">/</span><span class="mf">255.0</span><span class="p">),</span> <span class="nv">blue</span><span class="p">:</span> <span class="p">(</span><span class="mi">255</span><span class="o">/</span><span class="mf">255.0</span><span class="p">),</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span>
+
+    <span class="k">let</span> <span class="nv">backButton</span> <span class="o">=</span> <span class="kt">UIBarButtonItem</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Back Prev"</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIBarButtonItemStyle</span><span class="o">.</span><span class="kt">Plain</span><span class="p">,</span> <span class="nv">target</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">action</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+
+    <span class="n">backButton</span><span class="o">.</span><span class="nf">setTitleTextAttributes</span><span class="p">([</span><span class="kt">NSFontAttributeName</span><span class="p">:</span> <span class="kt">UIFont</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"IRANSans"</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="mi">14</span><span class="p">)</span><span class="o">!</span><span class="p">],</span> <span class="nv">forState</span><span class="p">:</span> <span class="kt">UIControlState</span><span class="o">.</span><span class="kt">Normal</span><span class="p">)</span>
+
+    <span class="n">navigationItem</span><span class="o">.</span><span class="n">backBarButtonItem</span> <span class="o">=</span> <span class="n">backButton</span>
+
+<span class="p">}</span>
+
+</code></pre>
+</div>
+
+<p>The result should be this:</p>
+
+<p><img src="/assets/img/post/test-post/naivagtionbar_12.jpg" alt="Customizing Navgiation Bar" /></p>
+
+<p><strong>Create Transparent NavigationBar</strong></p>
+
+<p>Maybe you want use BarButtonItems or backBarButtonItem without Navigation Bar! so, you should create a transparent Navigation Bar first as below:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code>
+<span class="c1">//You should set navigation parameters viewDidLoad method</span>
+
+<span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+    <span class="k">self</span><span class="o">.</span><span class="n">navigationController</span><span class="p">?</span><span class="o">.</span><span class="n">navigationBar</span><span class="o">.</span><span class="nf">setBackgroundImage</span><span class="p">(</span><span class="kt">UIImage</span><span class="p">(),</span> <span class="nv">forBarMetrics</span><span class="p">:</span> <span class="o">.</span><span class="kt">Default</span><span class="p">)</span>
+
+        <span class="k">self</span><span class="o">.</span><span class="n">navigationController</span><span class="p">?</span><span class="o">.</span><span class="n">navigationBar</span><span class="o">.</span><span class="n">shadowImage</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">()</span>
+
+        <span class="k">self</span><span class="o">.</span><span class="n">navigationController</span><span class="p">?</span><span class="o">.</span><span class="n">navigationBar</span><span class="o">.</span><span class="n">translucent</span> <span class="o">=</span> <span class="kc">true</span>
+
+        <span class="k">self</span><span class="o">.</span><span class="n">navigationController</span><span class="p">?</span><span class="o">.</span><span class="n">navigationBar</span><span class="o">.</span><span class="n">tintColor</span> <span class="o">=</span> <span class="kt">UIColor</span><span class="p">(</span><span class="nv">red</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">),</span> <span class="nv">green</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">),</span> <span class="nv">blue</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="o">/</span><span class="mf">255.0</span><span class="p">),</span> <span class="nv">alpha</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">)</span>
+
+        <span class="k">let</span> <span class="nv">backButton</span> <span class="o">=</span> <span class="kt">UIBarButtonItem</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="s">"Back Prev"</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="kt">UIBarButtonItemStyle</span><span class="o">.</span><span class="kt">Plain</span><span class="p">,</span> <span class="nv">target</span><span class="p">:</span> <span class="k">self</span><span class="p">,</span> <span class="nv">action</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+
+        <span class="n">backButton</span><span class="o">.</span><span class="nf">setTitleTextAttributes</span><span class="p">([</span><span class="kt">NSFontAttributeName</span><span class="p">:</span> <span class="kt">UIFont</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"IRANSans"</span><span class="p">,</span> <span class="nv">size</span><span class="p">:</span> <span class="mi">14</span><span class="p">)</span><span class="o">!</span><span class="p">],</span> <span class="nv">forState</span><span class="p">:</span> <span class="kt">UIControlState</span><span class="o">.</span><span class="kt">Normal</span><span class="p">)</span>
+
+        <span class="n">navigationItem</span><span class="o">.</span><span class="n">backBarButtonItem</span> <span class="o">=</span> <span class="n">backButton</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre>
+</div>
+
+<p>The result is this:</p>
+
+<p><img src="/assets/img/post/test-post/naivagtionbar_13.jpg" alt="Customizing Navgiation Bar" /></p>
+
+<p>Now, You can customize your Navigation Bar and Navigation Bar Items so easily and there is no limit for you</p>
+
+<p><img src="/assets/img/post/test-post/naivagtionbar_14.jpg" alt="Customizing Navgiation Bar" /></p>
+
+        </div>
+
+        <div class="post-routes-list">
+            
+            <a class="category-link" href="https://sadra.github.io/english/category/programming">Programming</a>
+            
+            <a class="category-link" href="https://sadra.github.io/english/category/swift">Swift</a>
+            
+            <a class="category-link" href="https://sadra.github.io/english/category/ui">UI</a>
+            
+            
+            <a class="tag-link" href="https://sadra.github.io/english/tag/ios">iOS</a>
+            
+        </div>
+
+
+        <div class="author-card">
+            <div class="author-message">
+                <img src="https://sadra.github.io/english/assets/img/base/avatar.jpg" alt="Sadra Isapanah Amlashi" id="avatar-img" />
+                <p>Please don't make comment below this post. Just tweet it, or share it on your blog, with reference link. Thank you :) </p>
+            </div>
+            <div class="addthis_inline_share_toolbox">Share it With</div>
+        </div>
+
+
+        <div class="Prev-next-post-container">
+            
+            <a class="previous-btn" href="/tag%20test/2000/01/01/test-post/">&laquo; Weblog Test</a>
+            
+            
+        </div>
+
+        <div class="related-posts-title">
+            <hr/>
+            <h5>Related Posts</h5>
+        </div>
+
+        <div class="related-posts-container">
+
+            
+            
+            
+
+            
+
+                
+                
+
+                
+
+                
+            
+
+                
+                
+
+                
+
+                
+            
+
+                
+                
+
+                
+
+                
+            
+
+                
+                
+
+                
+
+                
+            
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- Footer -->
+<footer class="footer-wrapper">
+
+
+    <div class="delimiter">
+        <a href="/" class="footer-logo">
+            <img src="https://sadra.github.io/english/assets/img/base/favicon.png" class="logo-wrapper">
+        </a>
+    </div>
+
+    <p class="footer-copyright">
+        2008 - 2017<br>
+        Content is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">Creative Commons</a>.
+
+    </p>
+
+    <div class="footer-social-links">
+        <a href="https://twitter.com/sadra-amlashi" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/sadra" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://medium.com/sadra" title="Medium" target="_blank"><i class="fa fa-medium"></i></a>
+        <a href="https://www.linkedin.com/in/amlashisadra/" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://facebook.com/sadra.am123" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+    </div>
+
+
+ </footer>
+<!-- /Footer -->
+        <script  type="application/javascript" src="https://sadra.github.io/english/assets/js/jquery-3.2.1.min.js"></script>
+<script  type="application/javascript" src="https://sadra.github.io/english/assets/js/function.js"></script>
+<script  type="application/javascript" src="https://sadra.github.io/english/assets/js/html2canvas.min.js"></script>
+<script  type="application/javascript" src="https://sadra.github.io/english/assets/js/canvas2image.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5952bba56b75766c"></script>
+    </body>
+</html>
