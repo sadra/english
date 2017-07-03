@@ -206,3 +206,4 @@ The result is this:
 Now, You can customize your Navigation Bar and Navigation Bar Items so easily and there is no limit for you
 
 ![Customizing Navgiation Bar](/assets/img/post/2016-6-29/naivagtionbar_14.jpg)
+
