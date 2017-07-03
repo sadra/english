@@ -25,7 +25,7 @@ author: Sadra
 
 Sometimes you need to customize your Navigation Bar. With this tutorial you can find out how to change Navigation Bar background color, change the Navigation Bar’s title’s font or size (programmatically), how to customize the left and right button of Navigation Bar and etc.
 
-![Customizing Navgiation Bar](/assets/img/post/2016-6-29/naivagtionbar_1.jpg)
+![Customizing Navgiation Bar]({{ site.url }}/assets/img/post/2016-6-29/naivagtionbar_1.jpg)
 
 
 First of All create your project and then embed in **Navigation Controller** into you ViewController
@@ -34,7 +34,7 @@ First of All create your project and then embed in **Navigation Controller** int
 
 Now we have a pure Navigation Controller and our baby ViewController.
 
-![Customizing Navgiation Bar]({{ site.url }}/assets/img/post/2016-6-29/naivagtionbar_.3jpg)
+![Customizing Navgiation Bar]({{ site.url }}/assets/img/post/2016-6-29/naivagtionbar_3.jpg)
 
 **Change Navigation Bar’s background color:**
 
@@ -82,7 +82,7 @@ You can add 2 button into you Navigation Bar, one button for left and one button
 
 and the result is:
 
-![Customizing Navgiation Bar]({{ site.url }}/assets/img/post/2016-6-29/naivagtionbar10_.jpg)
+![Customizing Navgiation Bar]({{ site.url }}/assets/img/post/2016-6-29/naivagtionbar_10.jpg)
 
 But programmatically you should create a button and define it for left or right of you Navigation Bar:
 
