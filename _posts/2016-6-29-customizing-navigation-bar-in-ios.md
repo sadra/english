@@ -4,12 +4,14 @@ title:  "Customizing navigation bar in ios"
 date: '2016-6-29'
 
 tags:
-    - iOS
-
-categories:
     - Programming
     - Swift
+    - Swift 2.4
     - UI
+
+categories:
+    - Apple
+    - iOS
 
 cover: /assets/img/post/test-post/cover.jpg
 
