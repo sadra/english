@@ -1,37 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="https://sadra.github.io/english/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sadra.github.io/english/" rel="alternate" type="text/html" /><updated>2017-07-03T20:49:45+04:30</updated><id>https://sadra.github.io/english/</id><title type="html">Sadra Isapanah Amlashi</title><subtitle>Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="https://sadra.github.io/english/feed.xml" rel="self" type="application/atom+xml" /><link href="https://sadra.github.io/english/" rel="alternate" type="text/html" /><updated>2017-07-03T20:50:53+04:30</updated><id>https://sadra.github.io/english/</id><title type="html">Sadra Isapanah Amlashi</title><subtitle>Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
 </subtitle><entry><title type="html">Customizing navigation bar in ios</title><link href="https://sadra.github.io/english/apple/ios/2016/06/29/customizing-navigation-bar-in-ios/" rel="alternate" type="text/html" title="Customizing navigation bar in ios" /><published>2016-06-29T00:00:00+04:30</published><updated>2016-06-29T00:00:00+04:30</updated><id>https://sadra.github.io/english/apple/ios/2016/06/29/customizing-navigation-bar-in-ios</id><content type="html" xml:base="https://sadra.github.io/english/apple/ios/2016/06/29/customizing-navigation-bar-in-ios/">&lt;p&gt;&lt;strong&gt;Issue&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Sometimes you need to customize your Navigation Bar. With this tutorial you can find out how to change Navigation Bar background color, change the Navigation Bar’s title’s font or size (programmatically), how to customize the left and right button of Navigation Bar and etc.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/test-post/naivagtionbar_1.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-29/naivagtionbar_1.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;First of All create your project and then embed in &lt;strong&gt;Navigation Controller&lt;/strong&gt; into you ViewController&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/test-post/naivagtionbar_2.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-29/naivagtionbar_2.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now we have a pure Navigation Controller and our baby ViewController.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/test-post/naivagtionbar_.3jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-29/naivagtionbar_.3jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Change Navigation Bar’s background color:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;At first choose the Navigation Controller, then select the &lt;strong&gt;Navigation Bar&lt;/strong&gt; , on Attributes Inspector , from Bar Tint choose your favorite color. done! you have you new Navigation Bar background color.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/test-post/naivagtionbar_4.gif&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-29/naivagtionbar_4.gif&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Set Title for Navigation Bar&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Choose you ViewController and select__Navigation Item__, then in Attributes Inspector set you title :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/test-post/naivagtionbar_5.gif&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-29/naivagtionbar_5.gif&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Then we want change the title attributes (color, size, font), after choosing Navigation Controller then Navigation Bar, we able to change title attributes from__Attributes Inspector__as you can see in below:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/test-post/naivagtionbar_6.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-29/naivagtionbar_6.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Exception: If you use__custom font__in your project, you cannot choose you font from here!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/test-post/naivagtionbar_7.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-29/naivagtionbar_7.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Solution: so, you should change title attributes with Swift in your ViewController Class. For this issue, you should set &lt;strong&gt;NSFontAttributeName&lt;/strong&gt; for &lt;strong&gt;titleTextAttributes&lt;/strong&gt; that contains Font-Family, Font Size and Font Color in ViewDidLoad of your viewController.&lt;/p&gt;
 
@@ -49,17 +49,17 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/test-post/naivagtionbar_8.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-29/naivagtionbar_8.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Add Button to Navigation Bar&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;You can add 2 button into you Navigation Bar, one button for left and one button for right. in StoryBoard you can add button as you see below:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/test-post/naivagtionbar_9.gif&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-29/naivagtionbar_9.gif&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;and the result is:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/test-post/naivagtionbar10_.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-29/naivagtionbar10_.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;But programmatically you should create a button and define it for left or right of you Navigation Bar:&lt;/p&gt;
 
@@ -117,7 +117,7 @@
 
 &lt;p&gt;And the result is:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/test-post/naivagtionbar_11.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-29/naivagtionbar_11.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Customize Navigation Bar’s BackButton&lt;/strong&gt;&lt;/p&gt;
 
@@ -145,7 +145,7 @@
 
 &lt;p&gt;The result should be this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/test-post/naivagtionbar_12.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-29/naivagtionbar_12.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Create Transparent NavigationBar&lt;/strong&gt;&lt;/p&gt;
 
@@ -180,11 +180,11 @@
 
 &lt;p&gt;The result is this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/test-post/naivagtionbar_13.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-29/naivagtionbar_13.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now, You can customize your Navigation Bar and Navigation Bar Items so easily and there is no limit for you&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/test-post/naivagtionbar_14.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;</content><author><name>Sadra Isapanah Amlashi</name></author><category term="Programming" /><category term="Swift" /><category term="Swift 2.4" /><category term="UI" /><summary type="html">Issue</summary></entry><entry><title type="html">Weblog Test</title><link href="https://sadra.github.io/english/tag%20test/2000/01/01/test-post/" rel="alternate" type="text/html" title="Weblog Test" /><published>2000-01-01T00:00:00+03:30</published><updated>2000-01-01T00:00:00+03:30</updated><id>https://sadra.github.io/english/tag%20test/2000/01/01/test-post</id><content type="html" xml:base="https://sadra.github.io/english/tag%20test/2000/01/01/test-post/">&lt;h1 id=&quot;an-h1-header&quot;&gt;An h1 header&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-29/naivagtionbar_14.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;</content><author><name>Sadra Isapanah Amlashi</name></author><category term="Programming" /><category term="Swift" /><category term="Swift 2.4" /><category term="UI" /><summary type="html">Issue</summary></entry><entry><title type="html">Weblog Test</title><link href="https://sadra.github.io/english/tag%20test/2000/01/01/test-post/" rel="alternate" type="text/html" title="Weblog Test" /><published>2000-01-01T00:00:00+03:30</published><updated>2000-01-01T00:00:00+03:30</updated><id>https://sadra.github.io/english/tag%20test/2000/01/01/test-post</id><content type="html" xml:base="https://sadra.github.io/english/tag%20test/2000/01/01/test-post/">&lt;h1 id=&quot;an-h1-header&quot;&gt;An h1 header&lt;/h1&gt;
 
 &lt;p&gt;Paragraphs are separated by a blank line.&lt;/p&gt;
 
