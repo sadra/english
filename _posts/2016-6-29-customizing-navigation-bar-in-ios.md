@@ -18,6 +18,8 @@ cover: /assets/img/post/2016-6-29/naivagtionbar_0.jpg
 author: Sadra
 ---
 
+![Test Image](/assets/img/post/test-post/post-image.jpg)
+
 
 **Issue**
 
