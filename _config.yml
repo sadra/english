@@ -3,8 +3,8 @@ email: sadra@isapanah.com
 description: > # this means to ignore newlines until "baseurl:"
   Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
 
-baseurl: "/english" # the subpath of your site, e.g. /blog
-url: "https://sadra.github.io/english" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "english" # the base hostname & protocol for your site, e.g. http://example.com
 
 twitter_path: https://twitter.com/sadra-amlashi
 github_path: https://github.com/sadra

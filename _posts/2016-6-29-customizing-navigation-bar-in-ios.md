@@ -18,9 +18,6 @@ cover: /assets/img/post/2016-6-29/naivagtionbar_0.jpg
 author: Sadra
 ---
 
-![Test Image](/assets/img/post/test-post/post-image.jpg)
-
-
 **Issue**
 
 Sometimes you need to customize your Navigation Bar. With this tutorial you can find out how to change Navigation Bar background color, change the Navigation Bar’s title’s font or size (programmatically), how to customize the left and right button of Navigation Bar and etc.
