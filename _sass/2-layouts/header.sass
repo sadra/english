@@ -23,10 +23,11 @@ header.header-container
     padding-right: 30px
     margin: auto
     border-bottom: 1px solid #ededed
-    @media screen and (max-width: 500px)
+    @media screen and (max-width: 600px)
       padding-top: 15px
       padding-left: 15px
       padding-right: 15px
+      display: block
     .nav-logo
       font-weight: 900
       color: $black
@@ -35,7 +36,7 @@ header.header-container
       justify-content: center
       align-items: center
       font-size: 1em
-      @media screen and (max-width: 500px)
+      @media screen and (max-width: 600px)
         font-size: 0.9em
     .nav-logo:hover
       color: $text-nav-hover
@@ -45,6 +46,7 @@ header.header-container
       flex-direction: row
       justify-content: center
       align-items: center
+      padding-left: 0 !important
       li
         display: block
         padding-right: 30px
@@ -54,9 +56,9 @@ header.header-container
           font-size: 1em
         a:hover
           color: $text-nav-hover
-        @media screen and (max-width: 500px)
+        @media screen and (max-width: 600px)
           padding-right: 10px
           a
-            font-size: 0.85em
+            font-size: 1em
       li:last-of-type
-        padding-right: 0px
+        padding-right: 0

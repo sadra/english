@@ -1,0 +1,26 @@
+---
+layout: theme
+title: Categories
+---
+<div class="content">
+
+    <h1 class="list-title">List of <span>Categories</span></h1>
+
+    <div class="list-items-container">
+        {% for category in site.categories %}
+        <a class="list-item-category" href="{{ site.url }}/category/{{ category[0] | slugify }}">{{ category[0] }}</a>
+        {% endfor %}
+    </div>
+
+    <br/>
+
+    <h1 class="list-title">List of <span>#Tags</span></h1>
+
+    <div class="list-items-container">
+        {% for tag in site.tags %}
+        <a class="list-item-tag" href="{{ site.url }}/tag/{{ tag[0] | slugify }}">{{ tag[0] }}</a>
+        {% endfor %}
+    </div>
+
+
+</div>

@@ -30,15 +30,10 @@ layout: theme
             </div>
 
             <div class="post_info">
-                <p>
-                    Author: <a href="{{ site.data.authors[page.author].info-url }}">{{ site.data.authors[page.author].name }}</a>
-                </p>
-                <br>
-                <small>
-                    at {{ page.date | date: "%A %d %b %Y"}}
-                </small>
+                <p><a href="{{ site.data.authors[page.author].info-url }}">{{ site.data.authors[page.author].name }}</a></p>
+                <small>{{ site.data.authors[page.author].bio }}</small><br/>
+                <small>at {{ page.date | date: "%A %d %b %Y"}}</small>
             </div>
-
         </div>
 
 
@@ -60,8 +55,6 @@ layout: theme
             <a class="next-btn" href="{{page.next.url}}">Next: {{page.next.title}} →</a>
             {% endif %}
         </div>
-
-
 
     </div>
 
