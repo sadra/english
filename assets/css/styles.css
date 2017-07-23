@@ -921,7 +921,8 @@ footer.footer-wrapper {
   @media screen and (max-width: 500px) {
     .content {
       padding: 15px 5px;
-      width: 95%; } }
+      width: 95%;
+      margin-top: 15px; } }
 
 .content:after {
   content: "";
@@ -1084,7 +1085,8 @@ footer.footer-wrapper {
       margin-right: 15px;
       width: 100%; }
       .blog-post-container .post_created .post_info p {
-        line-height: 0.1em; }
+        line-height: 0.1em;
+        font-size: 0.95em; }
       .blog-post-container .post_created .post_info small {
         font-size: 0.75em;
         font-weight: 300;
@@ -1252,7 +1254,7 @@ footer.footer-wrapper {
 
 .archive-title {
   font-size: 1.2em;
-  margin-bottom: 10px;
+  margin: 15px 0;
   color: #546E7A; }
   @media screen and (max-width: 500px) {
     .archive-title {
@@ -1317,7 +1319,7 @@ footer.footer-wrapper {
 
 .list-title {
   font-size: 1.2em;
-  margin-bottom: 10px;
+  margin: 15px 0;
   color: #546E7A; }
   @media screen and (max-width: 500px) {
     .list-title {
