@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/english//feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/english//" rel="alternate" type="text/html" /><updated>2017-07-24T12:01:01+04:30</updated><id>http://isapanah.com/english//</id><title type="html">Sadra Isapanah Amlashi</title><subtitle>Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/english//feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/english//" rel="alternate" type="text/html" /><updated>2017-07-24T12:03:18+04:30</updated><id>http://isapanah.com/english//</id><title type="html">Sadra Isapanah Amlashi</title><subtitle>Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
 </subtitle><entry><title type="html">Go to activity when click on Notifications</title><link href="http://isapanah.com/english//2016/go-to-activity-when-click-on-notifications-android" rel="alternate" type="text/html" title="Go to activity when click on Notifications" /><published>2016-07-15T00:00:00+04:30</published><updated>2016-07-15T00:00:00+04:30</updated><id>http://isapanah.com/english//2016/go-to-activity-when-click-on-notifications-android</id><content type="html" xml:base="http://isapanah.com/english//2016/go-to-activity-when-click-on-notifications-android">&lt;p&gt;&lt;strong&gt;Issue: &lt;/strong&gt;Sometimes in android you need to run activity when user clicked on notification. with this tutorial you can find out how to do that!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-7-15/notification-1.jpg&quot; alt=&quot;Go to activity when click on Notifications&amp;quot; 1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://isapanah.com/english//assets/img/post/2016-7-15/notification-1.jpg&quot; alt=&quot;Go to activity when click on Notifications&amp;quot; 1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;First of all you should define a pendingIntent for activity that you want start when user clicked:&lt;/p&gt;
 
@@ -218,15 +218,15 @@
 
 &lt;p&gt;For the first step you should add a &lt;strong&gt;ScrollView&lt;/strong&gt; to your__viewController__as below:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-10/uitextfield_vs_keyboard-1.png&quot; alt=&quot;UITextFIeld vs UIKeyBoard 1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://isapanah.com/english//assets/img/post/2016-6-10/uitextfield_vs_keyboard-1.png&quot; alt=&quot;UITextFIeld vs UIKeyBoard 1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Then we should define the &lt;strong&gt;width&lt;/strong&gt; and &lt;strong&gt;height&lt;/strong&gt; of scrollview as equal as &lt;strong&gt;rootView&lt;/strong&gt; by drag and drop:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-10/uitextfield_vs_keyboard-2.jpg&quot; alt=&quot;UITextFIeld vs UIKeyBoard 2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://isapanah.com/english//assets/img/post/2016-6-10/uitextfield_vs_keyboard-2.jpg&quot; alt=&quot;UITextFIeld vs UIKeyBoard 2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now you can see the necessary constrains are defined:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-10/uitextfield_vs_keyboard-3.png&quot; alt=&quot;UITextFIeld vs UIKeyBoard 3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://isapanah.com/english//assets/img/post/2016-6-10/uitextfield_vs_keyboard-3.png&quot; alt=&quot;UITextFIeld vs UIKeyBoard 3&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For the last step define outlets in your CocoaTouch class:&lt;/p&gt;
 
@@ -295,7 +295,7 @@
 
 &lt;p&gt;Wow, it’s done! let’s check the result :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/post/2016-6-10/uitextfield_vs_keyboard-4.gif&quot; alt=&quot;UITextFIeld vs UIKeyBoard 4&quot; /&gt;&lt;/p&gt;</content><author><name>Sadra Isapanah Amlashi</name></author><category term="Programming" /><category term="Swift" /><category term="Swift 2.4" /><category term="UI" /><summary type="html">Issue</summary></entry><entry><title type="html">How to Get UIWebView HTML Content</title><link href="http://isapanah.com/english//2016/how-to-get-uiwebview-html-content" rel="alternate" type="text/html" title="How to Get UIWebView HTML Content" /><published>2016-06-06T00:00:00+04:30</published><updated>2016-06-06T00:00:00+04:30</updated><id>http://isapanah.com/english//2016/how-to-get-uiwebview-html-content</id><content type="html" xml:base="http://isapanah.com/english//2016/how-to-get-uiwebview-html-content">&lt;p&gt;&lt;strong&gt;Issue: &lt;/strong&gt;Sometimes you need to read the content of html that loaded in your__UIWebView__(Like for Payment Method) with this trick that comes in below you can do this action.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://isapanah.com/english//assets/img/post/2016-6-10/uitextfield_vs_keyboard-4.gif&quot; alt=&quot;UITextFIeld vs UIKeyBoard 4&quot; /&gt;&lt;/p&gt;</content><author><name>Sadra Isapanah Amlashi</name></author><category term="Programming" /><category term="Swift" /><category term="Swift 2.4" /><category term="UI" /><summary type="html">Issue</summary></entry><entry><title type="html">How to Get UIWebView HTML Content</title><link href="http://isapanah.com/english//2016/how-to-get-uiwebview-html-content" rel="alternate" type="text/html" title="How to Get UIWebView HTML Content" /><published>2016-06-06T00:00:00+04:30</published><updated>2016-06-06T00:00:00+04:30</updated><id>http://isapanah.com/english//2016/how-to-get-uiwebview-html-content</id><content type="html" xml:base="http://isapanah.com/english//2016/how-to-get-uiwebview-html-content">&lt;p&gt;&lt;strong&gt;Issue: &lt;/strong&gt;Sometimes you need to read the content of html that loaded in your__UIWebView__(Like for Payment Method) with this trick that comes in below you can do this action.&lt;/p&gt;
 
 &lt;p&gt;First of all, implement your UIViewController from UIWebViewDelegate. Then, add the UIWebView into StoryBoard UIViewController and define the outlets in you project , this is the result:&lt;/p&gt;
 
