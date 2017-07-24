@@ -1256,7 +1256,7 @@ footer.footer-wrapper {
   cursor: pointer;
   position: fixed;
   bottom: 5px;
-  left: 10px;
+  right: 10px;
   display: none;
   z-index: 9999999; }
   .back-to-top .arrow-up {
