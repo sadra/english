@@ -24,15 +24,15 @@ Many of programmers have problem with using UITExtField. When you focus on UITex
 
 For the first step you should add a **ScrollView** to your__viewController__as below:
 
-![UITextFIeld vs UIKeyBoard 1](/assets/img/post/2016-6-10/uitextfield_vs_keyboard-1.png)
+![UITextFIeld vs UIKeyBoard 1]({{ site.url }}/assets/img/post/2016-6-10/uitextfield_vs_keyboard-1.png)
 
 Then we should define the **width** and **height** of scrollview as equal as **rootView** by drag and drop:
 
-![UITextFIeld vs UIKeyBoard 2](/assets/img/post/2016-6-10/uitextfield_vs_keyboard-2.jpg)
+![UITextFIeld vs UIKeyBoard 2]({{ site.url }}/assets/img/post/2016-6-10/uitextfield_vs_keyboard-2.jpg)
 
 Now you can see the necessary constrains are defined:
 
-![UITextFIeld vs UIKeyBoard 3](/assets/img/post/2016-6-10/uitextfield_vs_keyboard-3.png)
+![UITextFIeld vs UIKeyBoard 3]({{ site.url }}/assets/img/post/2016-6-10/uitextfield_vs_keyboard-3.png)
 
 For the last step define outlets in your CocoaTouch class:
 
@@ -101,4 +101,4 @@ override func viewWillDisappear(animated: Bool) {
 
 Wow, it’s done! let’s check the result :
 
-![UITextFIeld vs UIKeyBoard 4](/assets/img/post/2016-6-10/uitextfield_vs_keyboard-4.gif)
+![UITextFIeld vs UIKeyBoard 4]({{ site.url }}/assets/img/post/2016-6-10/uitextfield_vs_keyboard-4.gif)

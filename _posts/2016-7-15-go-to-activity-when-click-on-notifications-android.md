@@ -18,7 +18,7 @@ author: Sadra
 
 **Issue: **Sometimes in android you need to run activity when user clicked on notification. with this tutorial you can find out how to do that!
 
-![Go to activity when click on Notifications" 1](/assets/img/post/2016-7-15/notification-1.jpg)
+![Go to activity when click on Notifications" 1]({{ site.url }}/assets/img/post/2016-7-15/notification-1.jpg)
 
 First of all you should define a pendingIntent for activity that you want start when user clicked:
 
