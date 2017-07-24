@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="Farsi">
+
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta content="IE-edge,chrome=1" http-equiv="X-UA-Compatable">
+<meta name="description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+<title>How to Get UIWebView HTML Content</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="How to Get UIWebView HTML Content">
+<meta property="og:url" content="http://isapanah.com/english//apple/ios/2016/06/06/how-to-get-uiwebview-html-content/">
+
+<meta property="og:image" content="/assets/img/post/2016-6-6/totrial_get_uiwebview_content.jpg" />
+
+<meta property="og:site_name" content="Sadra Isapanah Amlashi">
+<meta property="og:description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Get UIWebView HTML Content">
+<meta name="twitter:description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+
+<link rel="alternative" href="/site-map.xml" title="Sadra Isapanah Amlashi" type="application/atom+xml">
+<link rel="short icon" type="image/x-icon" href="http://isapanah.com/english//assets/img/base/favicon.png">
+<link rel="stylesheet" type="text/css" href="http://isapanah.com/english//assets/css/styles.css">
+
+    </head>
+
+    <body>
+        <!-- Header -->
+<header class="header-container">
+    <nav class="nav-wrap">
+        <a href="http://isapanah.com/english/" class="nav-logo">Sadra Isapanah Amlashi</a>
+        <ul class="navigation">
+
+            <li><a href="http://isapanah.com/english//">Articles</a></li>
+            <li><a href="http://isapanah.com/english//list/items">Categories</a></li>
+            <li><a href="http://isapanah.com/english//about/">About</a></li>
+            <li><a href="https://sadra.github.io/">فارسی</a></li>
+
+        </ul>
+    </nav>
+</header>
+<!-- /Header -->
+
+        <div class="content">
+
+    <div class="blog-post-container">
+
+        <div class="post-title-container">
+            <h1 class="post-title">How to Get UIWebView HTML Content</h1>
+        </div>
+
+        <div class="post_created">
+
+            <div class="author_avatar">
+                <img src="https://sadra.github.io/english/assets/img/base/avatar.jpg" alt="Sadra Isapanah Amlashi" id="avatar-img" />
+            </div>
+
+            <div class="post_info">
+                <p><a href="https://sadra.github.io/english/about">Sadra Isapanah Amlashi</a></p>
+                <small>I'm a Android & iOS developer.</small><br/>
+                <small>at Monday 06 Jun 2016</small>
+            </div>
+        </div>
+
+
+        
+            <div class="post-cover">
+                <img src="http://isapanah.com/english//assets/img/post/2016-6-6/totrial_get_uiwebview_content.jpg" alt="How to Get UIWebView HTML Content">
+            </div>
+        
+
+
+        <div class="post-content">
+            <p><strong>Issue: </strong>Sometimes you need to read the content of html that loaded in your__UIWebView__(Like for Payment Method) with this trick that comes in below you can do this action.</p>
+
+<p>First of all, implement your UIViewController from UIWebViewDelegate. Then, add the UIWebView into StoryBoard UIViewController and define the outlets in you project , this is the result:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">class</span> <span class="kt">ViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span>  <span class="kt">UIWebViewDelegate</span> <span class="p">{</span>
+
+    <span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">myUIWebView</span><span class="p">:</span> <span class="kt">UIWebView</span><span class="o">!</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">didReceiveMemoryWarning</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">didReceiveMemoryWarning</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Now define your WebView as the current__delegate__item, and request for loading url.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+
+        <span class="n">myUIWebView</span><span class="o">.</span><span class="n">delegate</span> <span class="o">=</span> <span class="k">self</span>
+
+        <span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">NSMutableURLRequest</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"http://google.com"</span><span class="p">)</span><span class="o">!</span><span class="p">)</span>
+        <span class="n">request</span><span class="o">.</span><span class="kt">HTTPMethod</span> <span class="o">=</span> <span class="s">"GET"</span>
+
+        <span class="n">myUIWebView</span><span class="p">?</span><span class="o">.</span><span class="nf">loadRequest</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Before the main issue, there is some Variables that may you need them in your projects, getCurrentURL, getCurrentTitle and getCurrentContent of the page that loaded in the UIWebView:</p>
+
+<ul>
+  <li><strong>getCurrentURL:</strong> with this method you can return the current URL of page that is loaded in UIWebViews.</li>
+</ul>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">getCurrentURL</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">mypaymentWV</span><span class="p">?</span><span class="o">.</span><span class="n">request</span><span class="p">?</span><span class="o">.</span><span class="kt">URL</span><span class="o">!.</span><span class="n">absoluteString</span> <span class="p">??</span> <span class="s">""</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<ul>
+  <li><strong>getCurrentTitle:</strong> with this method you can return the current Title of page that is loaded in UIWebViews.</li>
+</ul>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">getCurrentTitle</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">mypaymentWV</span><span class="p">?</span><span class="o">.</span><span class="nf">stringByEvaluatingJavaScriptFromString</span><span class="p">(</span><span class="s">"document.title"</span><span class="p">)</span> <span class="p">??</span> <span class="s">""</span> <span class="c1">//with javaScript tools</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<ul>
+  <li><strong>getCurrentContent:</strong> with this method you can return the current Content of page that is loaded in UIWebViews, this is the main propose of this post.</li>
+</ul>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">var</span> <span class="nv">getCurrentContent</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">mypaymentWV</span><span class="p">?</span><span class="o">.</span><span class="nf">stringByEvaluatingJavaScriptFromString</span><span class="p">(</span><span class="s">"document.body.innerText"</span><span class="p">)</span> <span class="p">??</span> <span class="s">""</span> <span class="c1">//with javaScript tools</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Then, we have 2 tools for UIWebView, the 1st is action when <strong>UIWebView</strong> loading is started and is finished.</p>
+
+<p>We use <strong>webViewDidStartLoad</strong> when we want do some action on start loading, like getting the page url, and using webViewDidFinishLoad when we want getting title and content (BCUZ of javaScript features)</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">//getting url function</span>
+<span class="kd">func</span> <span class="nf">webViewDidStartLoad</span><span class="p">(</span><span class="nv">webView</span><span class="p">:</span> <span class="kt">UIWebView</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Current URL is: </span><span class="se">\(</span><span class="n">getCurrentURL</span><span class="o">!</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="c1">//result: 'Current URL is: http://google.com'</span>
+
+<span class="p">}</span>
+
+<span class="c1">//getting title and content function</span>
+<span class="kd">func</span> <span class="nf">webViewDidFinishLoad</span><span class="p">(</span><span class="nv">webView</span><span class="p">:</span> <span class="kt">UIWebView</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Current title is: </span><span class="se">\(</span><span class="n">getCurrentTitle</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="c1">//result: 'Current title is: Google Inc'</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Current content is: </span><span class="se">\(</span><span class="n">getCurrentContent</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="c1">//result: 'Current content is: Search it your F***king Words'</span>
+
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Maybe you have this question, Why? Why should we get Title and Content after loading finishes!? The answer is here, because we get Title and Content with javaScript methods and because of javaScript features we can just get elements after page has finished loading! Unfortunately, there is no chance for us.</p>
+
+        </div>
+
+
+
+        <div class="post-routes-list">
+            
+            <a class="category-link" href="http://isapanah.com/english//category/apple">Apple</a>
+            
+            <a class="category-link" href="http://isapanah.com/english//category/ios">iOS</a>
+            
+            
+            <a class="tag-link" href="http://isapanah.com/english//tag/programming">Programming</a>
+            
+            <a class="tag-link" href="http://isapanah.com/english//tag/swift">Swift</a>
+            
+            <a class="tag-link" href="http://isapanah.com/english//tag/swift-2-4">Swift 2.4</a>
+            
+            <a class="tag-link" href="http://isapanah.com/english//tag/webview">WebView</a>
+            
+        </div>
+
+
+        <div class="Prev-next-post-container">
+            
+            <a class="previous-btn" href="/tag%20test/2000/01/01/test-post/">← Previous: Weblog Test</a>
+            
+            
+            <a class="next-btn" href="/apple/ios/2016/06/10/uitexfield-vs-keyboard-problem/">Next: UITexField vs KeyBoard problem →</a>
+            
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- Footer -->
+<footer class="footer-wrapper">
+
+
+    <div class="delimiter">
+        <a href="/" class="footer-logo">
+            <img src="http://isapanah.com/english//assets/img/base/favicon.png" class="logo-wrapper">
+        </a>
+    </div>
+
+    <p class="footer-copyright">
+        2008 - 2017<br>
+        Content is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">Creative Commons</a>.
+
+    </p>
+
+    <div class="footer-social-links">
+        <a href="https://twitter.com/sadra-amlashi" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/sadra" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://medium.com/sadra" title="Medium" target="_blank"><i class="fa fa-medium"></i></a>
+        <a href="https://www.linkedin.com/in/amlashisadra/" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://facebook.com/sadra.am123" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+    </div>
+
+
+ </footer>
+<!-- /Footer -->
+        <script  type="application/javascript" src="http://isapanah.com/english//assets/js/jquery-3.2.1.min.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/english//assets/js/function.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/english//assets/js/html2canvas.min.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/english//assets/js/canvas2image.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5952bba56b75766c"></script>
+    </body>
+</html>

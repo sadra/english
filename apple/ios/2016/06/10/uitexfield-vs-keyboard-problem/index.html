@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="Farsi">
+
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta content="IE-edge,chrome=1" http-equiv="X-UA-Compatable">
+<meta name="description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+<title>UITexField vs KeyBoard problem</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="UITexField vs KeyBoard problem">
+<meta property="og:url" content="http://isapanah.com/english//apple/ios/2016/06/10/uitexfield-vs-keyboard-problem/">
+
+<meta property="og:image" content="/assets/img/post/2016-6-10/uitextfield_vs_keyboard-0.jpg" />
+
+<meta property="og:site_name" content="Sadra Isapanah Amlashi">
+<meta property="og:description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UITexField vs KeyBoard problem">
+<meta name="twitter:description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+
+<link rel="alternative" href="/site-map.xml" title="Sadra Isapanah Amlashi" type="application/atom+xml">
+<link rel="short icon" type="image/x-icon" href="http://isapanah.com/english//assets/img/base/favicon.png">
+<link rel="stylesheet" type="text/css" href="http://isapanah.com/english//assets/css/styles.css">
+
+    </head>
+
+    <body>
+        <!-- Header -->
+<header class="header-container">
+    <nav class="nav-wrap">
+        <a href="http://isapanah.com/english/" class="nav-logo">Sadra Isapanah Amlashi</a>
+        <ul class="navigation">
+
+            <li><a href="http://isapanah.com/english//">Articles</a></li>
+            <li><a href="http://isapanah.com/english//list/items">Categories</a></li>
+            <li><a href="http://isapanah.com/english//about/">About</a></li>
+            <li><a href="https://sadra.github.io/">فارسی</a></li>
+
+        </ul>
+    </nav>
+</header>
+<!-- /Header -->
+
+        <div class="content">
+
+    <div class="blog-post-container">
+
+        <div class="post-title-container">
+            <h1 class="post-title">UITexField vs KeyBoard problem</h1>
+        </div>
+
+        <div class="post_created">
+
+            <div class="author_avatar">
+                <img src="https://sadra.github.io/english/assets/img/base/avatar.jpg" alt="Sadra Isapanah Amlashi" id="avatar-img" />
+            </div>
+
+            <div class="post_info">
+                <p><a href="https://sadra.github.io/english/about">Sadra Isapanah Amlashi</a></p>
+                <small>I'm a Android & iOS developer.</small><br/>
+                <small>at Friday 10 Jun 2016</small>
+            </div>
+        </div>
+
+
+        
+            <div class="post-cover">
+                <img src="http://isapanah.com/english//assets/img/post/2016-6-10/uitextfield_vs_keyboard-0.jpg" alt="UITexField vs KeyBoard problem">
+            </div>
+        
+
+
+        <div class="post-content">
+            <p><strong>Issue</strong></p>
+
+<p>Many of programmers have problem with using UITExtField. When you focus on UITexfField, keyboard will appear and cover our UITextField. so, we should solve this problem with moving up the UITextField position in the screen when keyboard is opened!</p>
+
+<p>For the first step you should add a <strong>ScrollView</strong> to your__viewController__as below:</p>
+
+<p><img src="/assets/img/post/2016-6-10/uitextfield_vs_keyboard-1.png" alt="UITextFIeld vs UIKeyBoard 1" /></p>
+
+<p>Then we should define the <strong>width</strong> and <strong>height</strong> of scrollview as equal as <strong>rootView</strong> by drag and drop:</p>
+
+<p><img src="/assets/img/post/2016-6-10/uitextfield_vs_keyboard-2.jpg" alt="UITextFIeld vs UIKeyBoard 2" /></p>
+
+<p>Now you can see the necessary constrains are defined:</p>
+
+<p><img src="/assets/img/post/2016-6-10/uitextfield_vs_keyboard-3.png" alt="UITextFIeld vs UIKeyBoard 3" /></p>
+
+<p>For the last step define outlets in your CocoaTouch class:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// out lets of UIScrollVIew, UIView &amp; UITextField</span>
+<span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">myScrollView</span><span class="p">:</span> <span class="kt">UIScrollView</span><span class="o">!</span>
+<span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">myUIViewContainer</span><span class="p">:</span> <span class="kt">UIView</span><span class="o">!</span>
+<span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">myTextView</span><span class="p">:</span> <span class="kt">UITextField</span><span class="o">!</span>
+</code></pre>
+</div>
+
+<p>Next. We need two function to define some action when keyboard will appear and will disappear. in <strong>keyboardWillShow</strong> we stay and observe when keyboard is opened, we scroll the scrollview as equals as keyboard height to up:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">//move scroll up when keyboard is open</span>
+<span class="kd">func</span> <span class="nf">keyboardWillShow</span><span class="p">(</span><span class="nv">notification</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">userInfo</span> <span class="o">=</span> <span class="n">notification</span><span class="o">.</span><span class="n">userInfo</span> <span class="p">{</span> <span class="c1">//check what is there is new event</span>
+        <span class="k">if</span> <span class="k">let</span> <span class="nv">keyboardSize</span> <span class="o">=</span>  <span class="p">(</span><span class="n">userInfo</span><span class="p">[</span><span class="kt">UIKeyboardFrameBeginUserInfoKey</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">NSValue</span><span class="p">)?</span><span class="o">.</span><span class="kt">CGRectValue</span><span class="p">()</span> <span class="p">{</span> <span class="c1">//get the keyboard properties</span>
+
+            <span class="k">let</span> <span class="nv">screenSize</span><span class="p">:</span> <span class="kt">CGRect</span> <span class="o">=</span> <span class="kt">UIScreen</span><span class="o">.</span><span class="nf">mainScreen</span><span class="p">()</span><span class="o">.</span><span class="n">bounds</span>
+            <span class="k">let</span> <span class="nv">screenHalfHeight</span> <span class="o">=</span> <span class="n">screenSize</span><span class="o">.</span><span class="n">height</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="c1">//get the half of size of screen</span>
+
+            <span class="k">if</span><span class="p">(</span><span class="n">screenHalfHeight</span> <span class="o">&lt;</span> <span class="mi">300</span> <span class="p">){</span>
+
+                <span class="k">let</span> <span class="nv">movingSize</span> <span class="o">=</span> <span class="n">keyboardSize</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">height</span> <span class="o">-</span> <span class="n">myUIViewContainer</span><span class="o">.</span><span class="n">bounds</span><span class="o">.</span><span class="n">height</span> <span class="c1">//get the scrolling up size, as size as doesn't cover the UITexField</span>
+                <span class="n">myScrollView</span><span class="o">.</span><span class="nf">setContentOffset</span><span class="p">(</span><span class="kt">CGPointMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">movingSize</span><span class="p">),</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span> <span class="c1">//scrolling up</span>
+
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>This function works this way that first of all check the notification for find out the keyboard is open or not! then get the keyboard properties.</p>
+
+<p>Then we check the size of screen, my you ask why? because we want know if the size of screen is not enough to cover the UITextField and UIViews container then we don’t need to do any actions for that ( like as in iPad or iPhone 6s plus and etc ). notice, you can remove these lines if you don’t need them.</p>
+
+<p>Next, we check how much we should scrolling up? We can find this size when we mines the UIView height from keyboard height.</p>
+
+<p>At the end, ScrollView scrolling up as height as we define.</p>
+
+<p>Next. we should define <strong>keyboardWillHide</strong> for when the keyboard is closed scrolling down to the begging position.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">//function actions when keyboard will be hide</span>
+<span class="kd">func</span> <span class="nf">keyboardWillHide</span><span class="p">(</span><span class="nv">notification</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">myScrollView</span><span class="o">.</span><span class="nf">setContentOffset</span><span class="p">(</span><span class="kt">CGPointMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Finally, for the last step, we need observer to determine when there is any new event (like when keyboard will be open). We define it in viewWillAppear overridden function, notice just in <strong>viewWillAppear</strong> we can define observer. You should know we must remove observer in <strong>viewWillDisappear</strong> we don’t need it in the next viewController, and it my caused the crash of application. by the way, these functions define as below:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">// Add observer method</span>
+<span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="o">.</span><span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+    <span class="kt">NSNotificationCenter</span><span class="o">.</span><span class="nf">defaultCenter</span><span class="p">()</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="nv">selector</span><span class="p">:</span> <span class="kd">#selector(</span><span class="nf">ViewController.keyboardWillShow(_:)</span><span class="kd">)</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">UIKeyboardWillShowNotification</span><span class="p">,</span> <span class="nv">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+    <span class="kt">NSNotificationCenter</span><span class="o">.</span><span class="nf">defaultCenter</span><span class="p">()</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="nv">selector</span><span class="p">:</span> <span class="kd">#selector(</span><span class="nf">ViewController.keyboardWillHide(_:)</span><span class="kd">)</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">UIKeyboardWillHideNotification</span><span class="p">,</span> <span class="nv">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Remove observer</span>
+<span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillDisappear</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="o">.</span><span class="nf">viewWillDisappear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
+    <span class="kt">NSNotificationCenter</span><span class="o">.</span><span class="nf">defaultCenter</span><span class="p">()</span><span class="o">.</span><span class="nf">removeObserver</span><span class="p">(</span><span class="k">self</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Wow, it’s done! let’s check the result :</p>
+
+<p><img src="/assets/img/post/2016-6-10/uitextfield_vs_keyboard-4.gif" alt="UITextFIeld vs UIKeyBoard 4" /></p>
+
+        </div>
+
+
+
+        <div class="post-routes-list">
+            
+            <a class="category-link" href="http://isapanah.com/english//category/apple">Apple</a>
+            
+            <a class="category-link" href="http://isapanah.com/english//category/ios">iOS</a>
+            
+            
+            <a class="tag-link" href="http://isapanah.com/english//tag/programming">Programming</a>
+            
+            <a class="tag-link" href="http://isapanah.com/english//tag/swift">Swift</a>
+            
+            <a class="tag-link" href="http://isapanah.com/english//tag/swift-2-4">Swift 2.4</a>
+            
+            <a class="tag-link" href="http://isapanah.com/english//tag/ui">UI</a>
+            
+        </div>
+
+
+        <div class="Prev-next-post-container">
+            
+            <a class="previous-btn" href="/apple/ios/2016/06/06/how-to-get-uiwebview-html-content/">← Previous: How to Get UIWebView HTML Content</a>
+            
+            
+            <a class="next-btn" href="/apple/ios/2016/06/29/customizing-navigation-bar-in-ios/">Next: Customizing navigation bar in ios →</a>
+            
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- Footer -->
+<footer class="footer-wrapper">
+
+
+    <div class="delimiter">
+        <a href="/" class="footer-logo">
+            <img src="http://isapanah.com/english//assets/img/base/favicon.png" class="logo-wrapper">
+        </a>
+    </div>
+
+    <p class="footer-copyright">
+        2008 - 2017<br>
+        Content is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">Creative Commons</a>.
+
+    </p>
+
+    <div class="footer-social-links">
+        <a href="https://twitter.com/sadra-amlashi" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/sadra" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://medium.com/sadra" title="Medium" target="_blank"><i class="fa fa-medium"></i></a>
+        <a href="https://www.linkedin.com/in/amlashisadra/" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://facebook.com/sadra.am123" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+    </div>
+
+
+ </footer>
+<!-- /Footer -->
+        <script  type="application/javascript" src="http://isapanah.com/english//assets/js/jquery-3.2.1.min.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/english//assets/js/function.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/english//assets/js/html2canvas.min.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/english//assets/js/canvas2image.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5952bba56b75766c"></script>
+    </body>
+</html>

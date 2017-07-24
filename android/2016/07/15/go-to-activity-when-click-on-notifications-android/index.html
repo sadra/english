@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="Farsi">
+
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta content="IE-edge,chrome=1" http-equiv="X-UA-Compatable">
+<meta name="description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+<title>Go to activity when click on Notifications</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Go to activity when click on Notifications">
+<meta property="og:url" content="http://isapanah.com/english//android/2016/07/15/go-to-activity-when-click-on-notifications-android/">
+
+<meta property="og:image" content="/assets/img/post/2016-7-15/notification-0.png" />
+
+<meta property="og:site_name" content="Sadra Isapanah Amlashi">
+<meta property="og:description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Go to activity when click on Notifications">
+<meta name="twitter:description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+
+<link rel="alternative" href="/site-map.xml" title="Sadra Isapanah Amlashi" type="application/atom+xml">
+<link rel="short icon" type="image/x-icon" href="http://isapanah.com/english//assets/img/base/favicon.png">
+<link rel="stylesheet" type="text/css" href="http://isapanah.com/english//assets/css/styles.css">
+
+    </head>
+
+    <body>
+        <!-- Header -->
+<header class="header-container">
+    <nav class="nav-wrap">
+        <a href="http://isapanah.com/english/" class="nav-logo">Sadra Isapanah Amlashi</a>
+        <ul class="navigation">
+
+            <li><a href="http://isapanah.com/english//">Articles</a></li>
+            <li><a href="http://isapanah.com/english//list/items">Categories</a></li>
+            <li><a href="http://isapanah.com/english//about/">About</a></li>
+            <li><a href="https://sadra.github.io/">فارسی</a></li>
+
+        </ul>
+    </nav>
+</header>
+<!-- /Header -->
+
+        <div class="content">
+
+    <div class="blog-post-container">
+
+        <div class="post-title-container">
+            <h1 class="post-title">Go to activity when click on Notifications</h1>
+        </div>
+
+        <div class="post_created">
+
+            <div class="author_avatar">
+                <img src="https://sadra.github.io/english/assets/img/base/avatar.jpg" alt="Sadra Isapanah Amlashi" id="avatar-img" />
+            </div>
+
+            <div class="post_info">
+                <p><a href="https://sadra.github.io/english/about">Sadra Isapanah Amlashi</a></p>
+                <small>I'm a Android & iOS developer.</small><br/>
+                <small>at Friday 15 Jul 2016</small>
+            </div>
+        </div>
+
+
+        
+            <div class="post-cover">
+                <img src="http://isapanah.com/english//assets/img/post/2016-7-15/notification-0.png" alt="Go to activity when click on Notifications">
+            </div>
+        
+
+
+        <div class="post-content">
+            <p><strong>Issue: </strong>Sometimes in android you need to run activity when user clicked on notification. with this tutorial you can find out how to do that!</p>
+
+<p><img src="/assets/img/post/2016-7-15/notification-1.jpg" alt="Go to activity when click on Notifications&quot; 1" /></p>
+
+<p>First of all you should define a pendingIntent for activity that you want start when user clicked:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kt">Intent</span> <span class="n">notificationIntent</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">Intent</span><span class="p">(</span><span class="n">myContext</span><span class="p">,</span> <span class="n">myDestinitionActivty</span><span class="o">.</span><span class="kd">class</span><span class="p">);</span>
+<span class="kt">PendingIntent</span> <span class="n">pendingIntent</span> <span class="o">=</span> <span class="kt">PendingIntent</span><span class="o">.</span><span class="nf">getActivity</span><span class="p">(</span><span class="n">myContext</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">notificationIntent</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>Then you should add this pending intent into you notification’s declaration:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="c1">//Notification Manager</span>
+<span class="kt">NotificationManager</span> <span class="n">notificationManager</span> <span class="o">=</span> <span class="p">(</span><span class="kt">NotificationManager</span><span class="p">)</span> <span class="n">context</span><span class="o">.</span><span class="nf">getSystemService</span><span class="p">(</span><span class="kt">Context</span><span class="o">.</span><span class="kt">NOTIFICATION_SERVICE</span><span class="p">);</span>
+<span class="kt">Notification</span> <span class="n">notification</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">NotificationCompat</span><span class="o">.</span><span class="kt">Builder</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">setContentTitle</span><span class="p">(</span><span class="s">"This is a notification"</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">setContentText</span><span class="p">(</span><span class="s">"This is notification desciption "</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">setContentIntent</span><span class="p">(</span><span class="n">pendingIntent</span><span class="p">)</span> <span class="c1">//set pending intent here</span>
+        <span class="o">.</span><span class="nf">setSmallIcon</span><span class="p">(</span><span class="kt">R</span><span class="o">.</span><span class="n">drawable</span><span class="o">.</span><span class="n">notify_icon</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">setTicker</span><span class="p">(</span><span class="s">"My notification"</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">setWhen</span><span class="p">(</span><span class="kt">System</span><span class="o">.</span><span class="nf">currentTimeMillis</span><span class="p">())</span>
+        <span class="o">.</span><span class="nf">build</span><span class="p">();</span>
+<span class="n">notification</span><span class="o">.</span><span class="n">flags</span> <span class="o">|=</span> <span class="kt">Notification</span><span class="o">.</span><span class="kt">FLAG_AUTO_CANCEL</span><span class="p">;</span>
+<span class="n">notificationManager</span><span class="o">.</span><span class="nf">notify</span><span class="p">(</span><span class="mi">123456789</span><span class="p">,</span> <span class="n">notification</span><span class="p">);</span>
+</code></pre>
+</div>
+
+<p>all things done, now if user clicking on notification, myDestinitionActivty will be open. You can use this feature for every Intent action you want.</p>
+
+        </div>
+
+
+
+        <div class="post-routes-list">
+            
+            <a class="category-link" href="http://isapanah.com/english//category/android">Android</a>
+            
+            
+            <a class="tag-link" href="http://isapanah.com/english//tag/programming">Programming</a>
+            
+            <a class="tag-link" href="http://isapanah.com/english//tag/java">Java</a>
+            
+            <a class="tag-link" href="http://isapanah.com/english//tag/notification">Notification</a>
+            
+        </div>
+
+
+        <div class="Prev-next-post-container">
+            
+            <a class="previous-btn" href="/apple/ios/2016/06/29/customizing-navigation-bar-in-ios/">← Previous: Customizing navigation bar in ios</a>
+            
+            
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- Footer -->
+<footer class="footer-wrapper">
+
+
+    <div class="delimiter">
+        <a href="/" class="footer-logo">
+            <img src="http://isapanah.com/english//assets/img/base/favicon.png" class="logo-wrapper">
+        </a>
+    </div>
+
+    <p class="footer-copyright">
+        2008 - 2017<br>
+        Content is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">Creative Commons</a>.
+
+    </p>
+
+    <div class="footer-social-links">
+        <a href="https://twitter.com/sadra-amlashi" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/sadra" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://medium.com/sadra" title="Medium" target="_blank"><i class="fa fa-medium"></i></a>
+        <a href="https://www.linkedin.com/in/amlashisadra/" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://facebook.com/sadra.am123" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+    </div>
+
+
+ </footer>
+<!-- /Footer -->
+        <script  type="application/javascript" src="http://isapanah.com/english//assets/js/jquery-3.2.1.min.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/english//assets/js/function.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/english//assets/js/html2canvas.min.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/english//assets/js/canvas2image.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5952bba56b75766c"></script>
+    </body>
+</html>
