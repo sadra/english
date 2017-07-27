@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="Farsi">
+
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta content="IE-edge,chrome=1" http-equiv="X-UA-Compatable">
+<meta name="description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-68873815-10', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+<meta name="twitter:card" content="summary">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://isapanah.com/english/2016/detect-app-on-background-or-foreground">
+<meta property="og:description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+<meta name="twitter:description" content="Howdy! My name is Sadra Isapanah Amlashi. I’m an Android and iOS App Developer.
+">
+
+
+<title>Sadra Amlashi | How to detect when app moves to background or foreground</title>
+<meta property="og:title" content="Sadra Amlashi | How to detect when app moves to background or foreground">
+<meta property="og:site_name" content="Sadra Amlashi | How to detect when app moves to background or foreground">
+<meta property="twitter:title" content="Sadra Amlashi | How to detect when app moves to background or foreground">
+
+
+
+
+<meta property="twitter:image" content="http://isapanah.com/english/assets/img/avatar.jpg" />
+<meta property="og:image" content="http://isapanah.com/english/assets/img/avatar.jpg" />
+
+
+
+<link rel="alternative" href="/site-map.xml" title="Sadra Isapanah Amlashi" type="application/atom+xml">
+<link rel="short icon" type="image/x-icon" href="http://isapanah.com/english/assets/img/base/favicon.png">
+<link rel="stylesheet" type="text/css" href="http://isapanah.com/english/assets/css/styles.css">
+
+    </head>
+
+    <body>
+        <!-- Header -->
+<header class="header-container">
+    <nav class="nav-wrap">
+        <a href="http://isapanah.com/english" class="nav-logo">Sadra Isapanah Amlashi</a>
+        <ul class="navigation">
+
+            <li><a href="http://isapanah.com/english/">Articles</a></li>
+            <li><a href="http://isapanah.com/english/list/items">Categories</a></li>
+            <li><a href="http://isapanah.com/english/about/">About</a></li>
+            <li><a href="https://sadra.github.io/">فارسی</a></li>
+
+        </ul>
+    </nav>
+</header>
+<!-- /Header -->
+
+        <div class="content">
+
+    <div class="blog-post-container">
+
+        <div class="post-title-container">
+            <h1 class="post-title">How to detect when app moves to background or foreground</h1>
+        </div>
+
+        <div class="post_created">
+
+            <div class="author_avatar">
+                <img src="https://sadra.github.io/english/assets/img/base/avatar.jpg" alt="Sadra Isapanah Amlashi" id="avatar-img" />
+            </div>
+
+            <div class="post_info">
+                <p><a href="https://sadra.github.io/english/about">Sadra Isapanah Amlashi</a></p>
+                <small>I'm a Android & iOS developer.</small><br/>
+                <small>at Wednesday 27 Jul 2016</small>
+            </div>
+        </div>
+
+
+        
+
+
+        <div class="post-content">
+            <p>As you there is a lifecycle for each application:</p>
+
+<p><img src="http://isapanah.com/english/assets/img/post/2016-7-27/foregroundvsbackground-0.png" alt="iOS Application Lifecycle" /></p>
+
+<p>but these methods didn’t help you when your app moves to background or foreground!</p>
+
+<p>But as the guides in <a href="https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/StrategiesforHandlingAppStateTransitions/StrategiesforHandlingAppStateTransitions.html">docs</a> there is more information about application lifecycle.</p>
+
+<p>When you app goes to background, the core broadcast a notification app moves to background. So, if your app or your ViewController registered for this notification, you can be aware when your app moves to background:</p>
+
+<p><img src="http://isapanah.com/english/assets/img/post/2016-7-27/foregroundvsbackground-2.png" alt="iOS Application Moves to Background" /></p>
+
+<p>As the same, for Moving to Foreground, we have notification:</p>
+
+<p><img src="http://isapanah.com/english/assets/img/post/2016-7-27/foregroundvsbackground-1.png" alt="iOS Application Moves to Foreground" /></p>
+
+<p>So, you have to ways to detect when your app moves to background ofr foreground:</p>
+
+<h3 id="in-appdelegate">In AppDelegate</h3>
+
+<p>That implemented by default in app delegation, and you can use this default methods for the issue:</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">applicationDidEnterBackground</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.</span>
+    <span class="c1">// If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"applicationDidEnterBackground"</span><span class="p">)</span>
+
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">applicationWillEnterForeground</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"applicationWillEnterForeground"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="in-uiviewcontroller">In UIViewController</h3>
+
+<p>If you want detect it in a UIViewController manually, you should register for the <code class="highlighter-rouge">UIApplicationWillEnterForeground</code> or <code class="highlighter-rouge">UIApplicationDidEnterBackground</code> notification anywhere in your app. That it’s triggered when user pressed home button and it moves to background, and then pressed double and choose app so it moves to foreground.</p>
+
+<ul>
+  <li>ForeGround</li>
+</ul>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">notificationCenter</span> <span class="o">=</span> <span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span>
+<span class="n">notificationCenter</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="nv">selector</span><span class="p">:</span> <span class="kd">#selector(</span><span class="nf">appMovedToBackground</span><span class="kd">)</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">Notification</span><span class="o">.</span><span class="kt">Name</span><span class="o">.</span><span class="kt">UIApplicationWillEnterForeground</span><span class="p">,</span> <span class="nv">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">appMovedToForeground</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"App moved to ForeGround!"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<ul>
+  <li>Background</li>
+</ul>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">notificationCenter</span> <span class="o">=</span> <span class="kt">NotificationCenter</span><span class="o">.</span><span class="k">default</span>
+<span class="n">notificationCenter</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="nv">selector</span><span class="p">:</span> <span class="kd">#selector(</span><span class="nf">appMovedToBackground</span><span class="kd">)</span><span class="p">,</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">Notification</span><span class="o">.</span><span class="kt">Name</span><span class="o">.</span><span class="kt">UIApplicationDidEnterBackground</span><span class="p">,</span> <span class="nv">object</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">appMovedToBackground</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"App moved to Background!"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="did-this-solution-work-for-you-please-pass-it-on">Did this solution work for you? Please pass it on!</h3>
+<p><a href="https://twitter.com/share">Tweet</a></p>
+
+        </div>
+
+
+
+        <div class="post-routes-list">
+            
+            <a class="category-link" href="http://isapanah.com/english/category/apple">Apple</a>
+            
+            <a class="category-link" href="http://isapanah.com/english/category/ios">iOS</a>
+            
+            <a class="category-link" href="http://isapanah.com/english/category/swift">Swift</a>
+            
+            
+            <a class="tag-link" href="http://isapanah.com/english/tag/programming">Programming</a>
+            
+            <a class="tag-link" href="http://isapanah.com/english/tag/swift">Swift</a>
+            
+            <a class="tag-link" href="http://isapanah.com/english/tag/swift-3">Swift 3</a>
+            
+            <a class="tag-link" href="http://isapanah.com/english/tag/applifecycle">AppLifecycle</a>
+            
+        </div>
+
+
+        <div class="Prev-next-post-container">
+            
+            <a class="previous-btn" href="/2016/go-to-activity-when-click-on-notifications-android">← Previous: Go to activity when click on Notifications</a>
+            
+            
+        </div>
+
+    </div>
+
+</div>
+
+
+<a id="back-to-top" href="#" class="back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left">
+    <img src="http://isapanah.com/english/assets/img/base/arrow-up.gif" class="arrow-up"/>
+</a>
+
+
+        <!-- Footer -->
+<footer class="footer-wrapper">
+
+
+    <div class="delimiter">
+        <a href="/" class="footer-logo">
+            <img src="http://isapanah.com/english/assets/img/base/favicon.png" class="logo-wrapper">
+        </a>
+    </div>
+
+    <p class="footer-copyright">
+        2008 - 2017<br>
+        Content is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">Creative Commons</a>.
+
+    </p>
+
+    <div class="footer-social-links">
+        <a href="https://twitter.com/sadra-amlashi" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/sadra" title="Github" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://medium.com/sadra" title="Medium" target="_blank"><i class="fa fa-medium"></i></a>
+        <a href="https://www.linkedin.com/in/amlashisadra/" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://facebook.com/sadra.am123" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+    </div>
+
+
+ </footer>
+<!-- /Footer -->
+        <script  type="application/javascript" src="http://isapanah.com/english/assets/js/jquery-3.2.1.min.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/english/assets/js/function.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/english/assets/js/html2canvas.min.js"></script>
+<script  type="application/javascript" src="http://isapanah.com/english/assets/js/canvas2image.js"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5952bba56b75766c"></script>
+    </body>
+</html>
