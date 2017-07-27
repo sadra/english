@@ -14,11 +14,7 @@
 
 
 <meta name="twitter:card" content="summary">
-
 <meta property="og:type" content="website">
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta property="og:description" content="{{ site.description }}">
-<meta name="twitter:description" content="{{ site.description }}">
 
 {% if page.title %}
 <title>Sadra Amlashi | {{ page.title }}</title>
@@ -37,9 +33,14 @@
 <meta property="twitter:image" content="{{ site.url }}{{ page.cover }}" />
 <meta property="og:image" content="{{ site.url }}{{ page.cover }}" />
 {% else %}
-<meta property="twitter:image" content="{{ site.url }}/assets/img/avatar.jpg" />
-<meta property="og:image" content="{{ site.url }}/assets/img/avatar.jpg" />
+<meta property="twitter:image" content="{{ site.url }}/assets/img/base/avatar.jpg" />
+<meta property="og:image" content="{{ site.url }}/assets/img/base/avatar.jpg" />
 {% endif %}
+
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:description" content="{{ site.description }}">
+<meta name="twitter:description" content="{{ site.description }}">
+
 
 
 <link rel="alternative" href="/site-map.xml" title="{{ site.title }}" type="application/atom+xml">
