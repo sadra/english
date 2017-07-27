@@ -17,7 +17,7 @@ categories:
 author: Sadra
 ---
 
-As you there is a lifecycle for each application:
+As you know, there is a lifecycle for each application:
 
 ![iOS Application Lifecycle]({{ site.url }}/assets/img/post/2016-7-27/foregroundvsbackground-0.png)
 
