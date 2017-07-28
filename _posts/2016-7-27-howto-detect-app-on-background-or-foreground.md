@@ -83,4 +83,4 @@ func appMovedToBackground() {
 }
 ```
 
-### Did this solution work for you? Please pass it on! [Tweet](https://twitter.com/share)
+Did this solution work for you? Please pass it on! **[Tweet](https://twitter.com/share)**
