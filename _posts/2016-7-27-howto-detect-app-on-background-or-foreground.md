@@ -1,7 +1,7 @@
 ---
 layout: blog_post
 title:  "How to detect when app moves to background or foreground"
-date: '2017-7-27'
+date: '2016-7-27'
 
 tags:
     - Programming
