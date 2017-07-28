@@ -1,21 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/english/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/english/" rel="alternate" type="text/html" /><updated>2017-07-28T11:32:25+04:30</updated><id>http://isapanah.com/english/</id><title type="html">Sadra Isapanah Amlashi</title><subtitle>My name is Sadra. I’m an iOS &amp; Android App Developer.
-</subtitle><entry><title type="html">How to detect when app moves to background or foreground</title><link href="http://isapanah.com/english/2016/howto-detect-app-on-background-or-foreground" rel="alternate" type="text/html" title="How to detect when app moves to background or foreground" /><published>2016-07-27T00:00:00+04:30</published><updated>2016-07-27T00:00:00+04:30</updated><id>http://isapanah.com/english/2016/howto-detect-app-on-background-or-foreground</id><content type="html" xml:base="http://isapanah.com/english/2016/howto-detect-app-on-background-or-foreground">&lt;p&gt;As you know, there is a lifecycle for each application:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="http://isapanah.com/english/feed.xml" rel="self" type="application/atom+xml" /><link href="http://isapanah.com/english/" rel="alternate" type="text/html" /><updated>2017-07-28T15:43:29+04:30</updated><id>http://isapanah.com/english/</id><title type="html">Sadra Isapanah Amlashi</title><subtitle>My name is Sadra. I’m an iOS &amp; Android App Developer.
+</subtitle><entry><title type="html">How to detect when app moves to background or foreground</title><link href="http://isapanah.com/english/2016/howto-detect-app-on-background-or-foreground" rel="alternate" type="text/html" title="How to detect when app moves to background or foreground" /><published>2016-07-27T00:00:00+04:30</published><updated>2016-07-27T00:00:00+04:30</updated><id>http://isapanah.com/english/2016/howto-detect-app-on-background-or-foreground</id><content type="html" xml:base="http://isapanah.com/english/2016/howto-detect-app-on-background-or-foreground">&lt;p&gt;As we know, there is implemented some methods for triggering an application’s lifecycle:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://isapanah.com/english/assets/img/post/2016-7-27/foregroundvsbackground-0.png&quot; alt=&quot;iOS Application Lifecycle&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;but these methods didn’t help you when your app moves to background or foreground!&lt;/p&gt;
+&lt;p&gt;There is an issue. These methods didn’t help us when the app moves to background or foreground! it just shows us onetime creation of UIViewControl or process of destroying.&lt;/p&gt;
 
 &lt;p&gt;But as the guides in &lt;a href=&quot;https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/StrategiesforHandlingAppStateTransitions/StrategiesforHandlingAppStateTransitions.html&quot;&gt;docs&lt;/a&gt; there is more information about application lifecycle.&lt;/p&gt;
 
-&lt;p&gt;When you app goes to background, the core broadcast a notification app moves to background. So, if your app or your ViewController registered for this notification, you can be aware when your app moves to background:&lt;/p&gt;
+&lt;p&gt;When your app goes to background, The Cocoa, broadcasts a notification with message of the app is moving to background. So, if your app or your UIViewController registered for this notification, you can be aware when your app moves to background:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://isapanah.com/english/assets/img/post/2016-7-27/foregroundvsbackground-2.png&quot; alt=&quot;iOS Application Moves to Background&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;As the same, for Moving to Foreground, we have notification:&lt;/p&gt;
+&lt;p&gt;As the same, for Moving to Foreground, we have a notification too:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://isapanah.com/english/assets/img/post/2016-7-27/foregroundvsbackground-1.png&quot; alt=&quot;iOS Application Moves to Foreground&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;So, you have to ways to detect when your app moves to background ofr foreground:&lt;/p&gt;
+&lt;p&gt;So, you have two ways to detect when your app moves to background or foreground:&lt;/p&gt;
 
 &lt;h3 id=&quot;in-appdelegate&quot;&gt;In AppDelegate&lt;/h3&gt;
 
@@ -66,7 +66,7 @@
 &lt;/div&gt;
 
 &lt;h3 id=&quot;did-this-solution-work-for-you-please-pass-it-on&quot;&gt;Did this solution work for you? Please pass it on!&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://twitter.com/share&quot;&gt;Tweet&lt;/a&gt;&lt;/p&gt;</content><author><name>Sadra Isapanah Amlashi</name></author><category term="Programming" /><category term="Swift" /><category term="Swift 3" /><category term="AppLifecycle" /><summary type="html">As you know, there is a lifecycle for each application:</summary></entry><entry><title type="html">Go to activity when click on Notifications</title><link href="http://isapanah.com/english/2016/go-to-activity-when-click-on-notifications-android" rel="alternate" type="text/html" title="Go to activity when click on Notifications" /><published>2016-07-15T00:00:00+04:30</published><updated>2016-07-15T00:00:00+04:30</updated><id>http://isapanah.com/english/2016/go-to-activity-when-click-on-notifications-android</id><content type="html" xml:base="http://isapanah.com/english/2016/go-to-activity-when-click-on-notifications-android">&lt;p&gt;&lt;strong&gt;Issue: &lt;/strong&gt;Sometimes in android you need to run activity when user clicked on notification. with this tutorial you can find out how to do that!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/share&quot;&gt;Tweet&lt;/a&gt;&lt;/p&gt;</content><author><name>Sadra Isapanah Amlashi</name></author><category term="Programming" /><category term="Swift" /><category term="Swift 3" /><category term="AppLifecycle" /><summary type="html">As we know, there is implemented some methods for triggering an application’s lifecycle:</summary></entry><entry><title type="html">Go to activity when click on Notifications</title><link href="http://isapanah.com/english/2016/go-to-activity-when-click-on-notifications-android" rel="alternate" type="text/html" title="Go to activity when click on Notifications" /><published>2016-07-15T00:00:00+04:30</published><updated>2016-07-15T00:00:00+04:30</updated><id>http://isapanah.com/english/2016/go-to-activity-when-click-on-notifications-android</id><content type="html" xml:base="http://isapanah.com/english/2016/go-to-activity-when-click-on-notifications-android">&lt;p&gt;&lt;strong&gt;Issue: &lt;/strong&gt;Sometimes in android you need to run activity when user clicked on notification. with this tutorial you can find out how to do that!&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://isapanah.com/english/assets/img/post/2016-7-15/notification-1.jpg&quot; alt=&quot;Go to activity when click on Notifications&amp;quot; 1&quot; /&gt;&lt;/p&gt;
 

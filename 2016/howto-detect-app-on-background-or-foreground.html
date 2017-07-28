@@ -93,23 +93,23 @@
 
 
         <div class="post-content">
-            <p>As you know, there is a lifecycle for each application:</p>
+            <p>As we know, there is implemented some methods for triggering an application’s lifecycle:</p>
 
 <p><img src="http://isapanah.com/english/assets/img/post/2016-7-27/foregroundvsbackground-0.png" alt="iOS Application Lifecycle" /></p>
 
-<p>but these methods didn’t help you when your app moves to background or foreground!</p>
+<p>There is an issue. These methods didn’t help us when the app moves to background or foreground! it just shows us onetime creation of UIViewControl or process of destroying.</p>
 
 <p>But as the guides in <a href="https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/StrategiesforHandlingAppStateTransitions/StrategiesforHandlingAppStateTransitions.html">docs</a> there is more information about application lifecycle.</p>
 
-<p>When you app goes to background, the core broadcast a notification app moves to background. So, if your app or your ViewController registered for this notification, you can be aware when your app moves to background:</p>
+<p>When your app goes to background, The Cocoa, broadcasts a notification with message of the app is moving to background. So, if your app or your UIViewController registered for this notification, you can be aware when your app moves to background:</p>
 
 <p><img src="http://isapanah.com/english/assets/img/post/2016-7-27/foregroundvsbackground-2.png" alt="iOS Application Moves to Background" /></p>
 
-<p>As the same, for Moving to Foreground, we have notification:</p>
+<p>As the same, for Moving to Foreground, we have a notification too:</p>
 
 <p><img src="http://isapanah.com/english/assets/img/post/2016-7-27/foregroundvsbackground-1.png" alt="iOS Application Moves to Foreground" /></p>
 
-<p>So, you have to ways to detect when your app moves to background ofr foreground:</p>
+<p>So, you have two ways to detect when your app moves to background or foreground:</p>
 
 <h3 id="in-appdelegate">In AppDelegate</h3>
 
