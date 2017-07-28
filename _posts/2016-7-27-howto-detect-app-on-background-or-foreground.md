@@ -17,23 +17,23 @@ categories:
 author: Sadra
 ---
 
-As you know, there is a lifecycle for each application:
+As we know, there is implemented some methods for triggering an application's lifecycle:
 
 ![iOS Application Lifecycle]({{ site.url }}/assets/img/post/2016-7-27/foregroundvsbackground-0.png)
 
-but these methods didn't help you when your app moves to background or foreground!
+There is an issue. These methods didn't help us when the app moves to background or foreground! it just shows us onetime creation of UIViewControl or process of destroying.
 
 But as the guides in [docs](https://developer.apple.com/library/content/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/StrategiesforHandlingAppStateTransitions/StrategiesforHandlingAppStateTransitions.html) there is more information about application lifecycle.
 
-When you app goes to background, the core broadcast a notification app moves to background. So, if your app or your ViewController registered for this notification, you can be aware when your app moves to background:
+When your app goes to background, The Cocoa, broadcasts a notification with message of the app is moving to background. So, if your app or your UIViewController registered for this notification, you can be aware when your app moves to background:
 
 ![iOS Application Moves to Background]({{ site.url }}/assets/img/post/2016-7-27/foregroundvsbackground-2.png)
 
-As the same, for Moving to Foreground, we have notification:
+As the same, for Moving to Foreground, we have a notification too:
 
 ![iOS Application Moves to Foreground]({{ site.url }}/assets/img/post/2016-7-27/foregroundvsbackground-1.png)
 
-So, you have to ways to detect when your app moves to background ofr foreground:
+So, you have two ways to detect when your app moves to background or foreground:
 
 ### In AppDelegate
 
