@@ -41,14 +41,10 @@ That implemented by default in app delegation, and you can use this default meth
 
 ```swift
 func applicationDidEnterBackground(_ application: UIApplication) {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     print("applicationDidEnterBackground")
-
 }
 
 func applicationWillEnterForeground(_ application: UIApplication) {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     print("applicationWillEnterForeground")
 }
 ```
@@ -60,8 +56,12 @@ If you want detect it in a UIViewController manually, you should register for th
 - ForeGround
 
 ```swift
-let notificationCenter = NotificationCenter.default
-notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: Notification.Name.UIApplicationWillEnterForeground, object: nil)
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    let notificationCenter = NotificationCenter.default
+    notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: Notification.Name.UIApplicationWillEnterForeground, object: nil)
+}
 
 func appMovedToForeground() {
     print("App moved to ForeGround!")
@@ -71,8 +71,12 @@ func appMovedToForeground() {
 - Background
 
 ```swift
-let notificationCenter = NotificationCenter.default
-notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    let notificationCenter = NotificationCenter.default
+    notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
+}
 
 func appMovedToBackground() {
     print("App moved to Background!")
