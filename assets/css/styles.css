@@ -750,7 +750,7 @@ header.header-container {
     padding-right: 30px;
     margin: auto;
     border-bottom: 1px solid #ededed; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 700px) {
       header.header-container nav.nav-wrap {
         padding-top: 15px;
         padding-left: 15px;
@@ -773,7 +773,7 @@ header.header-container {
           -ms-flex-align: center;
               align-items: center;
       font-size: 1em; }
-      @media screen and (max-width: 600px) {
+      @media screen and (max-width: 700px) {
         header.header-container nav.nav-wrap .nav-logo {
           font-size: 0.9em; } }
     header.header-container nav.nav-wrap .nav-logo:hover {
@@ -803,7 +803,7 @@ header.header-container {
           font-size: 1em; }
         header.header-container nav.nav-wrap ul.navigation li a:hover {
           color: #009688; }
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 700px) {
           header.header-container nav.nav-wrap ul.navigation li {
             padding-right: 10px; }
             header.header-container nav.nav-wrap ul.navigation li a {
