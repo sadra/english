@@ -8,17 +8,14 @@ blockquote
   color: $text-quote
   margin: 1.5em 1.5px
   padding: 15px
-
-blockquote:before
-  color: $gray-400
-  content: " \201C "
-  font-family: Georgia, serif
-  font-size: 4em
-  line-height: 0.1em
-  margin-left: 0.16em
-  vertical-align: -0.4em
-  margin-right: 10px
-
-blockquote p
-  display: inline
-  color: $text-quote !important
+  p
+    color: $text-quote !important
+  p:first-child:before
+    color: $gray-400
+    content: " \201C "
+    font-family: Georgia, serif
+    font-size: 4em
+    line-height: 0.1em
+    margin-left: 0.16em
+    vertical-align: -0.4em
+    margin-right: 10px
