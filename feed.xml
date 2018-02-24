@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="https://isapanah.com/english/feed.xml" rel="self" type="application/atom+xml" /><link href="https://isapanah.com/english/" rel="alternate" type="text/html" /><updated>2018-02-25T01:32:03+03:30</updated><id>https://isapanah.com/english/</id><title type="html">Sadra Isapanah Amlashi</title><subtitle>My name is Sadra. I’m an iOS &amp; Android App Developer.
-</subtitle><entry><title type="html">How to detect when app moves to background or foreground</title><link href="https://isapanah.com/english/2016/howto-detect-app-on-background-or-foreground" rel="alternate" type="text/html" title="How to detect when app moves to background or foreground" /><published>2016-07-27T00:00:00+04:30</published><updated>2016-07-27T00:00:00+04:30</updated><id>https://isapanah.com/english/2016/howto-detect-app-on-background-or-foreground</id><content type="html" xml:base="https://isapanah.com/english/2016/howto-detect-app-on-background-or-foreground">&lt;p&gt;As we know, there is implemented some methods for triggering an application’s lifecycle:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.5.0">Jekyll</generator><link href="//isapanah.com/english/feed.xml" rel="self" type="application/atom+xml" /><link href="//isapanah.com/english/" rel="alternate" type="text/html" /><updated>2018-02-25T01:35:51+03:30</updated><id>//isapanah.com/english/</id><title type="html">Sadra Isapanah Amlashi</title><subtitle>My name is Sadra. I’m an iOS &amp; Android App Developer.
+</subtitle><entry><title type="html">How to detect when app moves to background or foreground</title><link href="//isapanah.com/english/2016/howto-detect-app-on-background-or-foreground" rel="alternate" type="text/html" title="How to detect when app moves to background or foreground" /><published>2016-07-27T00:00:00+04:30</published><updated>2016-07-27T00:00:00+04:30</updated><id>//isapanah.com/english/2016/howto-detect-app-on-background-or-foreground</id><content type="html" xml:base="//isapanah.com/english/2016/howto-detect-app-on-background-or-foreground">&lt;p&gt;As we know, there is implemented some methods for triggering an application’s lifecycle:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-7-27/foregroundvsbackground-0.png&quot; alt=&quot;iOS Application Lifecycle&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-7-27/foregroundvsbackground-0.png&quot; alt=&quot;iOS Application Lifecycle&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There is an issue. These methods didn’t help us when the app moves to background or foreground! it just shows us onetime creation of UIViewControl or process of destroying.&lt;/p&gt;
 
@@ -9,11 +9,11 @@
 
 &lt;p&gt;When your app goes to background, The Cocoa, broadcasts a notification with message of the app is moving to background. So, if your app or your UIViewController registered for this notification, you can be aware when your app moves to background:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-7-27/foregroundvsbackground-2.png&quot; alt=&quot;iOS Application Moves to Background&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-7-27/foregroundvsbackground-2.png&quot; alt=&quot;iOS Application Moves to Background&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As the same, for Moving to Foreground, we have a notification too:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-7-27/foregroundvsbackground-1.png&quot; alt=&quot;iOS Application Moves to Foreground&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-7-27/foregroundvsbackground-1.png&quot; alt=&quot;iOS Application Moves to Foreground&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;So, you have two ways to detect when your app moves to background or foreground:&lt;/p&gt;
 
@@ -69,9 +69,9 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Did this solution work for you? Please pass it on! &lt;strong&gt;&lt;a href=&quot;https://twitter.com/share&quot;&gt;Tweet&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name>Sadra Isapanah Amlashi</name></author><category term="Programming" /><category term="Swift" /><category term="Swift 3" /><category term="AppLifecycle" /><summary type="html">As we know, there is implemented some methods for triggering an application’s lifecycle:</summary></entry><entry><title type="html">Go to activity when click on Notifications</title><link href="https://isapanah.com/english/2016/go-to-activity-when-click-on-notifications-android" rel="alternate" type="text/html" title="Go to activity when click on Notifications" /><published>2016-07-15T00:00:00+04:30</published><updated>2016-07-15T00:00:00+04:30</updated><id>https://isapanah.com/english/2016/go-to-activity-when-click-on-notifications-android</id><content type="html" xml:base="https://isapanah.com/english/2016/go-to-activity-when-click-on-notifications-android">&lt;p&gt;&lt;strong&gt;Issue: &lt;/strong&gt;Sometimes in android you need to run activity when user clicked on notification. with this tutorial you can find out how to do that!&lt;/p&gt;
+&lt;p&gt;Did this solution work for you? Please pass it on! &lt;strong&gt;&lt;a href=&quot;https://twitter.com/share&quot;&gt;Tweet&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</content><author><name>Sadra Isapanah Amlashi</name></author><category term="Programming" /><category term="Swift" /><category term="Swift 3" /><category term="AppLifecycle" /><summary type="html">As we know, there is implemented some methods for triggering an application’s lifecycle:</summary></entry><entry><title type="html">Go to activity when click on Notifications</title><link href="//isapanah.com/english/2016/go-to-activity-when-click-on-notifications-android" rel="alternate" type="text/html" title="Go to activity when click on Notifications" /><published>2016-07-15T00:00:00+04:30</published><updated>2016-07-15T00:00:00+04:30</updated><id>//isapanah.com/english/2016/go-to-activity-when-click-on-notifications-android</id><content type="html" xml:base="//isapanah.com/english/2016/go-to-activity-when-click-on-notifications-android">&lt;p&gt;&lt;strong&gt;Issue: &lt;/strong&gt;Sometimes in android you need to run activity when user clicked on notification. with this tutorial you can find out how to do that!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-7-15/notification-1.jpg&quot; alt=&quot;Go to activity when click on Notifications&amp;quot; 1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-7-15/notification-1.jpg&quot; alt=&quot;Go to activity when click on Notifications&amp;quot; 1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;First of all you should define a pendingIntent for activity that you want start when user clicked:&lt;/p&gt;
 
@@ -97,39 +97,39 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;all things done, now if user clicking on notification, myDestinitionActivty will be open. You can use this feature for every Intent action you want.&lt;/p&gt;</content><author><name>Sadra Isapanah Amlashi</name></author><category term="Programming" /><category term="Java" /><category term="Notification" /><summary type="html">Issue: Sometimes in android you need to run activity when user clicked on notification. with this tutorial you can find out how to do that!</summary></entry><entry><title type="html">Customizing navigation bar in ios</title><link href="https://isapanah.com/english/2016/customizing-navigation-bar-in-ios" rel="alternate" type="text/html" title="Customizing navigation bar in ios" /><published>2016-06-29T00:00:00+04:30</published><updated>2016-06-29T00:00:00+04:30</updated><id>https://isapanah.com/english/2016/customizing-navigation-bar-in-ios</id><content type="html" xml:base="https://isapanah.com/english/2016/customizing-navigation-bar-in-ios">&lt;p&gt;&lt;strong&gt;Issue&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;all things done, now if user clicking on notification, myDestinitionActivty will be open. You can use this feature for every Intent action you want.&lt;/p&gt;</content><author><name>Sadra Isapanah Amlashi</name></author><category term="Programming" /><category term="Java" /><category term="Notification" /><summary type="html">Issue: Sometimes in android you need to run activity when user clicked on notification. with this tutorial you can find out how to do that!</summary></entry><entry><title type="html">Customizing navigation bar in ios</title><link href="//isapanah.com/english/2016/customizing-navigation-bar-in-ios" rel="alternate" type="text/html" title="Customizing navigation bar in ios" /><published>2016-06-29T00:00:00+04:30</published><updated>2016-06-29T00:00:00+04:30</updated><id>//isapanah.com/english/2016/customizing-navigation-bar-in-ios</id><content type="html" xml:base="//isapanah.com/english/2016/customizing-navigation-bar-in-ios">&lt;p&gt;&lt;strong&gt;Issue&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Sometimes you need to customize your Navigation Bar. With this tutorial you can find out how to change Navigation Bar background color, change the Navigation Bar’s title’s font or size (programmatically), how to customize the left and right button of Navigation Bar and etc.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_1.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_1.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;First of All create your project and then embed in &lt;strong&gt;Navigation Controller&lt;/strong&gt; into you ViewController&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_2.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_2.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now we have a pure Navigation Controller and our baby ViewController.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_3.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_3.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Change Navigation Bar’s background color:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;At first choose the Navigation Controller, then select the &lt;strong&gt;Navigation Bar&lt;/strong&gt; , on Attributes Inspector , from Bar Tint choose your favorite color. done! you have you new Navigation Bar background color.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_4.gif&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_4.gif&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Set Title for Navigation Bar&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Choose you ViewController and select__Navigation Item__, then in Attributes Inspector set you title :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_5.gif&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_5.gif&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Then we want change the title attributes (color, size, font), after choosing Navigation Controller then Navigation Bar, we able to change title attributes from__Attributes Inspector__as you can see in below:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_6.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_6.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Exception: If you use__custom font__in your project, you cannot choose you font from here!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_7.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_7.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Solution: so, you should change title attributes with Swift in your ViewController Class. For this issue, you should set &lt;strong&gt;NSFontAttributeName&lt;/strong&gt; for &lt;strong&gt;titleTextAttributes&lt;/strong&gt; that contains Font-Family, Font Size and Font Color in ViewDidLoad of your viewController.&lt;/p&gt;
 
@@ -147,17 +147,17 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_8.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_8.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Add Button to Navigation Bar&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;You can add 2 button into you Navigation Bar, one button for left and one button for right. in StoryBoard you can add button as you see below:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_9.gif&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_9.gif&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;and the result is:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_10.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_10.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;But programmatically you should create a button and define it for left or right of you Navigation Bar:&lt;/p&gt;
 
@@ -215,7 +215,7 @@
 
 &lt;p&gt;And the result is:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_11.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_11.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Customize Navigation Bar’s BackButton&lt;/strong&gt;&lt;/p&gt;
 
@@ -243,7 +243,7 @@
 
 &lt;p&gt;The result should be this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_12.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_12.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Create Transparent NavigationBar&lt;/strong&gt;&lt;/p&gt;
 
@@ -278,25 +278,25 @@
 
 &lt;p&gt;The result is this:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_13.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_13.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now, You can customize your Navigation Bar and Navigation Bar Items so easily and there is no limit for you&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_14.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;</content><author><name>Sadra Isapanah Amlashi</name></author><category term="Programming" /><category term="Swift" /><category term="Swift 2.4" /><category term="UI" /><summary type="html">Issue</summary></entry><entry><title type="html">UITexField vs KeyBoard problem</title><link href="https://isapanah.com/english/2016/uitexfield-vs-keyboard-problem" rel="alternate" type="text/html" title="UITexField vs KeyBoard problem" /><published>2016-06-10T00:00:00+04:30</published><updated>2016-06-10T00:00:00+04:30</updated><id>https://isapanah.com/english/2016/uitexfield-vs-keyboard-problem</id><content type="html" xml:base="https://isapanah.com/english/2016/uitexfield-vs-keyboard-problem">&lt;p&gt;&lt;strong&gt;Issue&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-29/naivagtionbar_14.jpg&quot; alt=&quot;Customizing Navgiation Bar&quot; /&gt;&lt;/p&gt;</content><author><name>Sadra Isapanah Amlashi</name></author><category term="Programming" /><category term="Swift" /><category term="Swift 2.4" /><category term="UI" /><summary type="html">Issue</summary></entry><entry><title type="html">UITexField vs KeyBoard problem</title><link href="//isapanah.com/english/2016/uitexfield-vs-keyboard-problem" rel="alternate" type="text/html" title="UITexField vs KeyBoard problem" /><published>2016-06-10T00:00:00+04:30</published><updated>2016-06-10T00:00:00+04:30</updated><id>//isapanah.com/english/2016/uitexfield-vs-keyboard-problem</id><content type="html" xml:base="//isapanah.com/english/2016/uitexfield-vs-keyboard-problem">&lt;p&gt;&lt;strong&gt;Issue&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Many of programmers have problem with using UITExtField. When you focus on UITexfField, keyboard will appear and cover our UITextField. so, we should solve this problem with moving up the UITextField position in the screen when keyboard is opened!&lt;/p&gt;
 
 &lt;p&gt;For the first step you should add a &lt;strong&gt;ScrollView&lt;/strong&gt; to your__viewController__as below:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-10/uitextfield_vs_keyboard-1.png&quot; alt=&quot;UITextFIeld vs UIKeyBoard 1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-10/uitextfield_vs_keyboard-1.png&quot; alt=&quot;UITextFIeld vs UIKeyBoard 1&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Then we should define the &lt;strong&gt;width&lt;/strong&gt; and &lt;strong&gt;height&lt;/strong&gt; of scrollview as equal as &lt;strong&gt;rootView&lt;/strong&gt; by drag and drop:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-10/uitextfield_vs_keyboard-2.jpg&quot; alt=&quot;UITextFIeld vs UIKeyBoard 2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-10/uitextfield_vs_keyboard-2.jpg&quot; alt=&quot;UITextFIeld vs UIKeyBoard 2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now you can see the necessary constrains are defined:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-10/uitextfield_vs_keyboard-3.png&quot; alt=&quot;UITextFIeld vs UIKeyBoard 3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-10/uitextfield_vs_keyboard-3.png&quot; alt=&quot;UITextFIeld vs UIKeyBoard 3&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;For the last step define outlets in your CocoaTouch class:&lt;/p&gt;
 
@@ -365,7 +365,7 @@
 
 &lt;p&gt;Wow, it’s done! let’s check the result :&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://isapanah.com/english/assets/img/post/2016-6-10/uitextfield_vs_keyboard-4.gif&quot; alt=&quot;UITextFIeld vs UIKeyBoard 4&quot; /&gt;&lt;/p&gt;</content><author><name>Sadra Isapanah Amlashi</name></author><category term="Programming" /><category term="Swift" /><category term="Swift 2.4" /><category term="UI" /><summary type="html">Issue</summary></entry><entry><title type="html">How to Get UIWebView HTML Content</title><link href="https://isapanah.com/english/2016/how-to-get-uiwebview-html-content" rel="alternate" type="text/html" title="How to Get UIWebView HTML Content" /><published>2016-06-06T00:00:00+04:30</published><updated>2016-06-06T00:00:00+04:30</updated><id>https://isapanah.com/english/2016/how-to-get-uiwebview-html-content</id><content type="html" xml:base="https://isapanah.com/english/2016/how-to-get-uiwebview-html-content">&lt;p&gt;&lt;strong&gt;Issue: &lt;/strong&gt;Sometimes you need to read the content of html that loaded in your__UIWebView__(Like for Payment Method) with this trick that comes in below you can do this action.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;//isapanah.com/english/assets/img/post/2016-6-10/uitextfield_vs_keyboard-4.gif&quot; alt=&quot;UITextFIeld vs UIKeyBoard 4&quot; /&gt;&lt;/p&gt;</content><author><name>Sadra Isapanah Amlashi</name></author><category term="Programming" /><category term="Swift" /><category term="Swift 2.4" /><category term="UI" /><summary type="html">Issue</summary></entry><entry><title type="html">How to Get UIWebView HTML Content</title><link href="//isapanah.com/english/2016/how-to-get-uiwebview-html-content" rel="alternate" type="text/html" title="How to Get UIWebView HTML Content" /><published>2016-06-06T00:00:00+04:30</published><updated>2016-06-06T00:00:00+04:30</updated><id>//isapanah.com/english/2016/how-to-get-uiwebview-html-content</id><content type="html" xml:base="//isapanah.com/english/2016/how-to-get-uiwebview-html-content">&lt;p&gt;&lt;strong&gt;Issue: &lt;/strong&gt;Sometimes you need to read the content of html that loaded in your__UIWebView__(Like for Payment Method) with this trick that comes in below you can do this action.&lt;/p&gt;
 
 &lt;p&gt;First of all, implement your UIViewController from UIWebViewDelegate. Then, add the UIWebView into StoryBoard UIViewController and define the outlets in you project , this is the result:&lt;/p&gt;
 
@@ -452,7 +452,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Maybe you have this question, Why? Why should we get Title and Content after loading finishes!? The answer is here, because we get Title and Content with javaScript methods and because of javaScript features we can just get elements after page has finished loading! Unfortunately, there is no chance for us.&lt;/p&gt;</content><author><name>Sadra Isapanah Amlashi</name></author><category term="Programming" /><category term="Swift" /><category term="Swift 2.4" /><category term="WebView" /><summary type="html">Issue: Sometimes you need to read the content of html that loaded in your__UIWebView__(Like for Payment Method) with this trick that comes in below you can do this action.</summary></entry><entry><title type="html">Weblog Test</title><link href="https://isapanah.com/english/2000/test-post" rel="alternate" type="text/html" title="Weblog Test" /><published>2000-01-01T00:00:00+03:30</published><updated>2000-01-01T00:00:00+03:30</updated><id>https://isapanah.com/english/2000/test-post</id><content type="html" xml:base="https://isapanah.com/english/2000/test-post">&lt;h1 id=&quot;an-h1-header&quot;&gt;An h1 header&lt;/h1&gt;
+&lt;p&gt;Maybe you have this question, Why? Why should we get Title and Content after loading finishes!? The answer is here, because we get Title and Content with javaScript methods and because of javaScript features we can just get elements after page has finished loading! Unfortunately, there is no chance for us.&lt;/p&gt;</content><author><name>Sadra Isapanah Amlashi</name></author><category term="Programming" /><category term="Swift" /><category term="Swift 2.4" /><category term="WebView" /><summary type="html">Issue: Sometimes you need to read the content of html that loaded in your__UIWebView__(Like for Payment Method) with this trick that comes in below you can do this action.</summary></entry><entry><title type="html">Weblog Test</title><link href="//isapanah.com/english/2000/test-post" rel="alternate" type="text/html" title="Weblog Test" /><published>2000-01-01T00:00:00+03:30</published><updated>2000-01-01T00:00:00+03:30</updated><id>//isapanah.com/english/2000/test-post</id><content type="html" xml:base="//isapanah.com/english/2000/test-post">&lt;h1 id=&quot;an-h1-header&quot;&gt;An h1 header&lt;/h1&gt;
 
 &lt;h2 id=&quot;paragraphs-are-separated-by-a-blank-line&quot;&gt;Paragraphs are separated by a blank line.&lt;/h2&gt;
 
